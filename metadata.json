@@ -1,0 +1,6 @@
+{
+  "name": "Cytotec GCC Platform",
+  "description": "منصة سيتوتيك الخليج المتكاملة للمعلومات الطبية الموثوقة، التوعية العامة، وخدمات الاستشارة السريعة في دول الخليج العربي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
