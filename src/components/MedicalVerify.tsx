@@ -11,6 +11,40 @@ import {
   Activity 
 } from 'lucide-react';
 
+interface FaqItemProps {
+  key?: React.Key;
+  question: string;
+  answer: string;
+}
+
+function FaqAccordionItem({ question, answer }: FaqItemProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div 
+      className={`bg-slate-950/70 border rounded-xl overflow-hidden transition-all duration-200 ${isOpen ? 'border-sky-500/30 bg-slate-950 shadow-lg shadow-sky-500/[0.02]' : 'border-slate-850 hover:border-slate-800'}`}
+    >
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full p-4 flex items-center justify-between text-right gap-4 cursor-pointer focus:outline-none"
+      >
+        <span className={`text-[10px] px-2 py-0.5 rounded font-mono font-bold transition duration-200 ${isOpen ? 'bg-sky-500/20 text-sky-305' : 'bg-slate-900 text-slate-500'}`}>
+          {isOpen ? 'إغلاق -' : 'عرض التفاصيل +'}
+        </span>
+        <span className={`text-xs sm:text-sm font-black transition-colors ${isOpen ? 'text-sky-400' : 'text-slate-200 hover:text-white'}`}>
+          {question}
+        </span>
+      </button>
+      
+      {isOpen && (
+        <div className="p-4 pt-0 border-t border-slate-900 text-[11px] sm:text-xs text-slate-400 leading-relaxed text-right font-normal bg-slate-955/40">
+          {answer}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function MedicalVerify() {
   const [activeTab, setActiveTab] = useState<'features' | 'tester' | 'guideline'>('features');
   const [zoomLevel, setZoomLevel] = useState<number>(1);
@@ -279,6 +313,60 @@ export default function MedicalVerify() {
           </div>
         </div>
       )}
+
+      {/* FREQUENTLY ASKED QUESTIONS (FAQ) COLLAPSIBLE ACCORDION */}
+      <div className="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl space-y-6 shadow-xl text-right mt-6" id="digital-faq-accordion-section">
+        <div className="border-b border-slate-850 pb-4 space-y-1.5">
+          <div className="flex items-center justify-between flex-row-reverse flex-wrap gap-2">
+            <span className="px-2.5 py-1 bg-sky-500/10 text-sky-400 font-mono text-[10px] sm:text-xs rounded-full border border-sky-500/20 font-extrabold uppercase">
+              RELIABILITY FAQ
+            </span>
+            <h3 className="text-sm sm:text-base font-black text-slate-100 flex items-center gap-2">
+              <HelpCircle className="w-5 h-5 text-sky-400 animate-pulse" />
+              <span>الأسئلة الشائعة حول موثوقية وفحص حبة سيتوتيك ١٤٦١</span>
+            </h3>
+          </div>
+          <p className="text-xs text-slate-400 leading-relaxed">
+            هل لا تزال لديك الشكوك أو التساؤلات بشأن التحقق الجغرافي ونقش عقار ميزوبروستول فايزر الأصلي؟ تفضل بالإجابات الطبية المعتمدة للفرز الواضح.
+          </p>
+        </div>
+
+        {/* Accordion List */}
+        <div className="space-y-3">
+          {[
+            {
+              question: 'ما معنى رقم نقش "1461" المحفور على حبوب سيتوتيك؟',
+              answer: 'هو الرمز اللوجستي الطبي الرسمي المسجل بمختبرات شركة فايزر (Pfizer) لتعريف حبوب ميزوبروستول بتركيز 200 ميكروجرام. أي حبة أصلية يجب أن تحمل هذا الرقم المحفور بدقة فائقة وبشكل ملموس وغائر وغير بارز أو مطبوع باللون.'
+            },
+            {
+              question: 'كيف يمكنني التمييز بين شريط سيتوتيك الأصلي والمقلد بالعين المجردة؟',
+              answer: 'الشريط الأصلي مصنوع بالكامل من الألومنيوم الفضي المتين الثقيل والمقاوم للرطوبة، ومطبوع من الخلف ببروز خطي واضح باللون الأسود الداكن بدون بهتان أو بقع باهتة. الأشرطة المغشوشة غالباً ما تكون مصنوعة من بلاستيك رقيق رديء الصنع أو تحمل نقوشات مائلة وغير متساوية الأبعاد.'
+            },
+            {
+              question: 'هل هناك حبوب سيتوتيك دائرية الشكل؟',
+              answer: 'لا على الإطلاق. حبوب سيتوتيك الأصلية من إنتاج فايزر تأتي دائماً وحصراً بشكل سداسي الأضلاع (Hexagonal Design) ذي حواف ناعمة ومتناسقة. الحبوب الدائرية أو البيضاوية الصفراء أو البيضاء اللامعة هي غير أصلية ومقلدة ويجب الحذر من علامة التقليد لتفادي سميتها وتلاشي مفعولها.'
+            },
+            {
+              question: 'ما هي درجة صلابة وملمس القرص الموثوق؟',
+              answer: 'يتميز القرص الأصلي بملمس طباشيري أبيض مطفأ (غير لماع) ذي درجة متانة عالية تمنع تفتته الفوضوي عند الحمل، ولكنه يحتوي على خط تقسيم عميق بالجهة المعاكسة يتيح لك كسره بنصفين متوازيين دقيقين عند اتباع توجيهات الجرعة الصيدلانية.'
+            },
+            {
+              question: 'كيف يؤثر استخدام الأدوية المقلدة من السوق السوداء على صحتي؟',
+              answer: 'الأدوية المقلدة تفتقر تماماً للمادة الفعالة المصقولة مخبرياً مما يتسبب في فشل الطمث المقصود، أو قد تشتمل على كيمياويات صناعية ملوثة تؤدي لتسمم دموي أو نزاف متقطع. لذا نوفر بالمنصة نظام التوريد المباشر والمشفر صوناً لأرواح المرضى.'
+            },
+            {
+              question: 'كيف يمكنني الاستعانة بخبراء المنصة للتأكد التام قبل الاستخدام؟',
+              answer: 'نحن نتيح نظام التدقيق الفوري مجاناً بالمنصة؛ بكل بساطة يمكنك النقر على زر "بوابة المنسقين" في الأسفل أو مراسلة الكادر الصيدلاني عبر الواتساب لإرسال صورة واضحة للشريط الحاصل عليه ومطابقة الرمز التسلسلي الدولي وتاريخ الباتش فورياً لراحة بال مطلقة.'
+            }
+          ].map((faq, idx) => (
+            <FaqAccordionItem 
+              key={idx} 
+              question={faq.question} 
+              answer={faq.answer} 
+            />
+          ))}
+        </div>
+      </div>
 
     </div>
   );
