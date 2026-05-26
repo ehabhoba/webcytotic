@@ -73,6 +73,62 @@ export const INITIAL_ARTICLES: Article[] = [
 4. **توصيل سريع**: نوفر مندوبين محترفين للتسليم باليد في الرياض وجدة والدمام خلال ساعتين ونصف كحد أقصى.
 
 سائلين الله لكم دوام العافية والصحة.`
+  },
+  {
+    id: 'cytotec-uses-and-notes',
+    title: 'Cytotec drugs: Uses, indications and notes when using',
+    category: 'الوعي الطبي والتحقق',
+    country: 'all',
+    keywords: ['cytotec', 'misoprostol', 'pfizer cytotec', 'stomach ulcer', 'gastric ulcer', 'terminate pregnancy', 'cytotec 200 mcg'],
+    dialect: 'English Medical Standard',
+    lastUpdated: '2026-05-25',
+    author: 'Medical Consultant & Pharmacy Team',
+    content: `Cytotec drugs: Uses, indications and notes when using
+
+Table of content
+Cytotec (so-called Misoprostol) prevents gastric ulcer which is a complication of using NSAIDs, and protects gastric mucosa by reducing exposure to acid. In some circumstances, Cytotec can also be used to terminate pregnancy when combined with another medication.
+
+1. What is Cytotec?
+Cytotec is used to prevent gastric ulcer when using NSAIDs (For example: Aspirin, Ibuprofen, Naproxen), especially in patients who are susceptible to or have a medical history of gastric ulcers.
+Cytotec reduces severe gastric ulcer like bleeding and protects gastric mucosa by reducing the exposed acid. Cytotec is also indicated to be used in combination with another medication (Mifepristone) to terminate a pregnancy (abortions).
+
+2. How to use Cytotec
+The dosage of Cytotec depends on the patient’s health condition and response to treatment.
+If you are using Cytotec to prevent gastric ulcer, please take it 4 times/day or follow the doctor’s guidance. Take it after meals and before bedtime to reduce the risk of diarrhea.
+If you are using Cytotec for the purpose of an induced abortion, make sure to take the medication exactly as doctor’s guidance.
+If this medication is used to assist in labor, it will be administered into the pregnant woman's vagina by a healthcare professional
+Avoid using anti-acid medication containing Magnesium when using Cytotec as they may exacerbate diarrhea. If you need anti-acid medication, please contact a doctor or pharmacist.
+Notify your doctor if your condition worsens.
+
+3. Cytotec side effects
+Some side effects of Cytotec are: Nausea or stomach cramps. Let your doctor know if you experience any abnormal menstrual issues, such as heavy vaginal bleeding.
+
+Diarrhea is quite common when using Cytotec. It usually occurs about two weeks after taking the medication and can last for a week, leading to dehydration and a loss of minerals. To prevent this, drink plenty of water and ensure proper hydration and electrolyte balance. Notify your doctor if you experience any signs of severe dehydration or mineral imbalance, such as severe dizziness, decreased urination, mood changes, muscle weakness, or slow or irregular heart rate.
+
+4. Measures to prevent side effects of Cytotec
+Before taking Cytotec, please inform the doctor of your allergy with this medication or other types of allergies.
+Before taking this medicine, please notify the doctor about your medical history, especially gastric or intestinal disease (for example: intestinal inflammation)
+
+Daily use of alcohol and tobacco can increase the risk of gastric bleeding. To enhance the effectiveness of the treatment, consider limiting alcoholic beverages and quitting smoking.
+
+If you are using Cytotec in combination with Mifepristone to terminate a pregnancy, an incomplete abortion may still occur (though rarely). It is crucial that you continue to be closely monitored by your doctor and keep all scheduled follow-up appointments to monitor your health. After using the combination of medications, vaginal bleeding might occur; however, inform your doctor immediately if you experience any unwanted symptoms such as severe, prolonged vaginal bleeding, signs of infection (including fever, chills), or fainting.
+
+Do not use Cytotec when you are pregnant because it might be harmful to the baby. If you are of childbearing age, use effective contraception while taking Cytotec and for at least 1 month after stopping the medication. If you are pregnant or suspect that you might be pregnant, inform your doctor immediately.
+
+Cytotec passes into breast milk but is unlikely to harm a nursing infant. Consult your doctor before breastfeeding.
+
+5. Treatment of overdose and how to store
+An overdose of Cytotec may result in symptoms such as breathlessness or faintness. If you notice signs of an overdose such as severe drowsiness, seizures, severe dizziness, or slow or irregular heartbeat, seek emergency medical attention immediately.
+If you miss a dose, take it as soon as you remember. If it is close to the time for your next dose, skip the missed dose. Do not double the dose.
+Store Cytotec at 25°C, keep it away from moisture, light, and out of reach of children and pets.
+
+Patients should take Cytotec exactly as doctor’s guidance to effectively prevent NSAIDs-induced gastric ulcers. Additionally, if any unusual symptoms suspected to be side effects of the medication occur, they should inform their doctor immediately for timely intervention.
+
+Reference source: webmd.com
+
+Read more:
+Bleeding after vaginal medication; should I continue with the treatment?
+To arrange an appointment, please call HOTLINE or make your reservation directly HERE. You may also download the MyVinmec app to schedule appointments faster and manage your reservations more conveniently.`
   }
 ];
 

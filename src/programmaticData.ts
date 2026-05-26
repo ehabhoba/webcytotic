@@ -23,6 +23,20 @@ export interface ProgrammaticCountryConfig {
   cities: CityConfig[];
 }
 
+export interface ProgrammaticPageRender {
+  url: string;
+  titleAr: string;
+  titleEn: string;
+  metaDescAr: string;
+  metaDescEn: string;
+  contentAr: string;
+  contentEn: string;
+  keywords: string[];
+  faqs: { question: string; answer: string; }[];
+  schemaJson: string;
+  internalLinks: { anchor: string; path: string; }[];
+}
+
 export const PROGRAMMATIC_GCC_DATA: ProgrammaticCountryConfig[] = [
   {
     code: 'OM',
@@ -161,67 +175,12 @@ export const PROGRAMMATIC_GCC_DATA: ProgrammaticCountryConfig[] = [
         neighborhoods: [
           { nameAr: 'السالمية', nameEn: 'Salmiya', landmarkAr: 'بمحاذاة شارع الخليج العربي الشهير', landmarkEn: 'Along the Arabian Gulf Road coordinates' },
           { nameAr: 'حولي', nameEn: 'Hawally', landmarkAr: 'بالقرب من المجمعات التجارية والشارع التونسي التجاري', landmarkEn: 'Near Commercial Malls Tunis Street' },
-          { nameAr: 'الأحمدي', nameEn: 'Ahmadi', landmarkAr: 'بالقرب من منطقة المكاتب والقطاع الجنوبي النفطي', landmarkEn: 'Near South Sector oil office district' }
-        ]
-      }
-    ]
-  },
-  {
-    code: 'QA',
-    nameAr: 'دولة قطر',
-    nameEn: 'Qatar',
-    whatsappNumber: '+96876636098',
-    clinicalAuthority: 'لجنة الترخيص والجودة المعتمدة بالدوحة',
-    localDialectGreeting: 'يا مرحبا ومسهلا بأهل قطر الأوفياء الكرام',
-    cities: [
-      {
-        nameAr: 'الدوحة',
-        nameEn: 'Doha',
-        deliveryTime: 'ساعتين بالتنسيق مع المندوب الفوري',
-        prominentKeywords: ['سيتوتيك الاصلي في قطر باليد', 'توصيل سايتوتك الدوحة السد'],
-        neighborhoods: [
-          { nameAr: 'السد', nameEn: 'Al Sadd', landmarkAr: 'بجوار طريق السد والمستشفى الطبي الكندري وبيروت', landmarkEn: 'Near Al Sadd Metro and Medical Clinics' },
-          { nameAr: 'اللؤلؤة', nameEn: 'The Pearl', landmarkAr: 'بجانب المارينا والمطاعم والفلل الراقية المسورة', landmarkEn: 'Near luxury Porto Arabia marina' },
-          { nameAr: 'الوعب', nameEn: 'Al Waab', landmarkAr: 'بالقرب من أسباير زون واستاد خليفة الدولي', landmarkEn: 'Near Aspire Zone and Khalifa Stadium' }
-        ]
-      }
-    ]
-  },
-  {
-    code: 'BH',
-    nameAr: 'مملكة البحرين',
-    nameEn: 'Bahrain',
-    whatsappNumber: '+96876636098',
-    clinicalAuthority: 'منسق توزيع الجرعة الآمنة بالمنامة ودول الجزر',
-    localDialectGreeting: 'أهلاً بكم يا غاليين بأرض البحرين الحبيبة والمنامة والرفاع',
-    cities: [
-      {
-        nameAr: 'المنامة',
-        nameEn: 'Manama',
-        deliveryTime: 'ساعتين بالاستلام اليدوي السري',
-        prominentKeywords: ['سعر حبوب سيتوتيك البحرين', 'وين احصل سيتوتيك اصلي بالمنامة الرفاع'],
-        neighborhoods: [
-          { nameAr: 'الجفير', nameEn: 'Juffair', landmarkAr: 'بالقرب من جادة الفنادق الكبرى والمسجد الكبير', landmarkEn: 'Near Juffair Boulevard' },
-          { nameAr: 'ضاحية السيف', nameEn: 'Seef', landmarkAr: 'بجوار مجمع السيف ومجمع سيتي سنتر المالي', landmarkEn: 'Near Seef Mall and City Centre Financial' }
+          { nameAr: 'الأحمدي', nameEn: 'Ahmadi', landmarkAr: 'بالقرب من منطقة المكاتب والقطاع الجنوبي النفطي', landmarkEn: 'Near southern oil sector offices and administrative zones' }
         ]
       }
     ]
   }
 ];
-
-export interface ProgrammaticPageRender {
-  url: string;
-  titleAr: string;
-  titleEn: string;
-  metaDescAr: string;
-  metaDescEn: string;
-  contentAr: string;
-  contentEn: string;
-  keywords: string[];
-  faqs: { question: string; answer: string }[];
-  schemaJson: string;
-  internalLinks: { anchor: string; path: string }[];
-}
 
 // Highly sophisticated deterministic generator that builds dynamic text on the fly
 export function generateProgrammaticSEOPage(
@@ -229,7 +188,8 @@ export function generateProgrammaticSEOPage(
   cityName: string,
   neighborhoodName: string,
   topic: 'original-vs-fake' | 'order-and-delivery' | 'medical-guide' = 'original-vs-fake',
-  lang: 'ar' | 'en' = 'ar'
+  lang: 'ar' | 'en' = 'ar',
+  focusKeyword?: string
 ): ProgrammaticPageRender {
   const country = PROGRAMMATIC_GCC_DATA.find(c => c.code === countryCode) || PROGRAMMATIC_GCC_DATA[0];
   const city = country.cities.find(c => c.nameAr === cityName || c.nameEn === cityName) || country.cities[0];
@@ -244,17 +204,27 @@ export function generateProgrammaticSEOPage(
   const landmarkAr = neighborhood.landmarkAr;
   const landmarkEn = neighborhood.landmarkEn;
 
-  // Build simulated structured URLs
-  const urlPath = `/${cEn.toLowerCase().replace(/\s+/g, '-')}/${ctEn.toLowerCase()}/${nhEn.toLowerCase()}/${topic}`;
+  // Build slug from focus keyword
+  const kwSlug = focusKeyword ? encodeURIComponent(focusKeyword.toLowerCase().trim().replace(/\s+/g, '-')) : '';
+  const urlPath = `/${cEn.toLowerCase().replace(/\s+/g, '-')}/${ctEn.toLowerCase()}/${nhEn.toLowerCase()}/${topic}${kwSlug ? `?kw=${kwSlug}` : ''}`;
   
-  // Custom Dynamic Keywords based on Location
+  // Custom Dynamic Keywords based on Location and Focus Keyword
   const customKeywords = [
+    ...(focusKeyword ? [focusKeyword, `معلومات ${focusKeyword}`, `${focusKeyword} في ${ctAr}`, `شراء ${focusKeyword} ${cAr}`] : []),
     `سيتوتيك الأصلي في ${nhAr} ${ctAr}`,
     `توصيل سيتوتيك فايزر في ${nhAr}`,
     `سعر حبوب سيتوتيك في ${ctAr}`,
     `وين القى سيتوتيك الأصلي ١٤٦١ في ${nhAr}`,
     `original cytotec ${nhEn} ${ctEn}`
   ];
+
+  // External reference domains for authoritative linkage
+  const extWebHub = "https://web.cytotec.fun/";
+  const extBlog = "https://blog.cytotec.fun/";
+  const extShop = "https://shop.cytotec.fun/";
+
+  const kwTitleAr = focusKeyword ? ` [ تفقد واستعلم عن: ${focusKeyword} ]` : '';
+  const kwTitleEn = focusKeyword ? ` [ Reference context: ${focusKeyword} ]` : '';
 
   // Title variations
   let titleAr = '';
@@ -265,98 +235,122 @@ export function generateProgrammaticSEOPage(
   let contentEn = '';
 
   if (topic === 'original-vs-fake') {
-    titleAr = `دليل فحص سيتوتيك الأصلي ١٤٦١ فايزر في ${nhAr}، ${ctAr} | التحقق والموثوقية المطلقة`;
-    titleEn = `Original Cytotec 1461 Pfizer Verification in ${nhEn}, ${ctEn} | Absolute Authenticity Guide`;
-    metaDescAr = `كيف تكتشف الفرق بالصور بين سيتوتيك الأصلي والمقلد في ${nhAr}، ${ctAr}؟ دليلك الطبي الصادر عن ${country.clinicalAuthority} للتعرف على الرمز السداسي ١٤٦١ وتجنب المغشوش.`;
-    metaDescEn = `How to spot original vs fake Cytotec in ${nhEn}, ${ctEn}? Learn about the hexagonal shape, 1461 engraving, and secure delivery. Verified by GCC medical authorities.`;
+    titleAr = `دليل فحص سيتوتيك الأصلي ١٤٦١ فايزر${kwTitleAr} في ${nhAr}، ${ctAr} | التحقق والموثوقية المطلقة`;
+    titleEn = `Original Cytotec 1461 Pfizer Verification${kwTitleEn} in ${nhEn}, ${ctEn} | Absolute Authenticity Guide`;
+    metaDescAr = `كيف تكتشف الفرق بالصور بين سيتوتيك الأصلي والمقلد بخصوص ${focusKeyword || 'الرمز السداسي ١٤٦١'} في ${nhAr}، ${ctAr}؟ دليلك الطبي المعتمد لضمان الأصالة.`;
+    metaDescEn = `How to spot original vs fake Cytotec with respect to ${focusKeyword || 'hexagon pills'} in ${nhEn}, ${ctEn}? Pfizer 1461 verification guide.`;
 
-    contentAr = `${country.localDialectGreeting}. نوفر لكم هذا الدليل المتكامل للفحص الدقيق المعتمد لعلاج سيتوتيك الأصلي (Pfizer Cytotec 200 mcg) خصيصاً للقراء في حي ${nhAr} بمدينة ${ctAr} (${landmarkAr}). 
+    contentAr = `${country.localDialectGreeting}. نوفر لكم هذا الدليل المتكامل للفحص الدقيق المعتمد لعلاج سيتوتيك الأصلي (Pfizer Cytotec 200 mcg) بخصوص الاستفسار الأكثر شيوعاً **"${focusKeyword || 'سيتوتيك ١٤٦١ للبيع'}"** خصيصاً للقراء في حي ${nhAr} بمدينة ${ctAr} (${landmarkAr}).
 
-بسبب غياب الرقابة في بعض الصيدليات الافتراضية غير المرخصة، انتشرت مؤخراً شحنات مقلدة ومغشوشة تشكل خطراً كبيراً على صحتك وعافيتك. 
+**أهمية الفحص قبل الشراء:**
+بسبب غياب الرقابة والانتشار التجاري على شبكة الإنترنت الموازية، برزت استعلامات حثيثة تبحث عن صلة الموثوقية الطبية بعبارات مثل **"${focusKeyword || 'حبوب سايتوتك'}"**. نؤكد لجميع المراجعين أن صلتنا المباشرة بالقنوات الطبية الرسمية تقضي على هذه الشكوك تماماً.
 
-لذلك، تؤكد لجنة التحقق المعتمدة (${country.clinicalAuthority}) على القوانين والمواصفات الثلاثية للأقراص الأصلية:
-1. **الشكل الهندسي السداسي المتناسق**: الحبة ليست مستديرة ولا مستطيلة بل سداسية الشكل تماماً.
-2. **النقش الغائر الممتاز 1461**: ستجد الرقم الحصري لفايزر "1461" محفوراً بوضوح على أحد وجهي القرص، بينما تجد الخط الفاصل العمودي على الوجه المقابل مباشرة.
-3. **مقاومة الاحتكاك الخفيف والملمس الأبيض الفاخر**: القرص لا يتفتت أو يتساقط منه رذاذ أبيض بمجرد ملامسته، ويحافظ على تماسكه داخل شريط الألومنيوم الفضي الصلب المدموغ بـ Batch Number يطابق الكود المسجل رقمياً.
+تؤكد لجنة التحقق المعتمدة (${country.clinicalAuthority}) على القوانين والمواصفات الثلاثية للأقراص الأصلية:
+1. **الشكل الهندسي السداسي المتناسق**: الحبة ليست مستديرة بل سداسية الشكل تماماً ولونها أبيض ناصع.
+2. **النقش الغائر الممتاز 1461**: ستجد الرقم الحصري لفايزر "1461" محفوراً بدقة بالغة على أحد وجهي القرص، بينما تجد الخط الفاصل العمودي على الوجه المقابل مباشرة لتسهيل تقسيم القرص لجرعات متساوية علمياً.
+3. **مقاومة الاحتكاك الخفيف والملمس الأبيض الفاخر**: القرص لا يتفتت بمجرد اللمس، ويحافظ على تماسكه التام.
 
-نحن نوفر خدمة توجيه واستيراد مباشر تضمن الموثوقية بنسبة ١٠٠٪، مع شحن مبرد وخفي باليد خلال ${city.deliveryTime} إلى باب منزلك في ${nhAr} وسائر أحياء ${ctAr}. للتسليم الآمن، تواصل مع منسق الولاية على الرقم الموحد: ${country.whatsappNumber}.`;
+**مرجعيات التوثيق والروابط الخارجية المعتمدة عالي الأرشفة:**
+* لمعرفة تفاصيل الترخيص وتصريحات الدواء العامة، يرجى مراجعة [البوابة الطبية الرئيسية لـ سيتوتيك](${extWebHub}) بشكل مباشر.
+* للاطلاع على المقالات العلمية والتركيبات الجزيئية التفصيلية لمادة ميزوبروستول، ندعوكم لزيارة [موسوعة مدونة سيتوتيك العلمية](${extBlog}).
+* للتحقق من المخزون المتوفر محلياً وحيازة الدعم الآمن بخصوص **"${focusKeyword || 'حبوب سيتوتك فايزر'}"** عبر بوابة الشراء المشفرة، تفضل بزيارة [المتجر الرقمي لـ سيتوتيك](${extShop}).
 
-    contentEn = `Greetings to our cherished readers in ${nhEn}, ${ctEn}. This portal is specifically designed to raise awareness about original Cytotec (Pfizer Misoprostol 200 mcg) in the area of ${nhEn} (${landmarkEn}) to protect families from dangerous counterfeit products scattered in unverified markets.
+نحن نوفر خدمة توجيه تضمن الموثوقية بنسبة ١٠٠٪، مع شحن مبرد وخفي باليد خلال **ساعتين فقط** (توصيل فوري وبسرية تامة) إلى باب منزلك في ${nhAr} وسائر أحياء ${ctAr}. للتسليم الآمن الفوري، تواصل مع منسق العمليات على الرقم المباشر: ${country.whatsappNumber}.`;
 
-Our official regional quality coordinator recommends verifying the following key features:
-- **Unique Hexagon Geometry**: The authentic pill is mathematically hexagonal, never circular or oval.
+    contentEn = `Greetings to our cherished readers in ${nhEn}, ${ctEn}. This portal is specifically designed to raise awareness about original Cytotec (Pfizer Misoprostol 200 mcg) in relation to the highly searched local inquiry: **"${focusKeyword || 'buy cytotec online'}"** around the area of ${nhEn} (${landmarkEn}).
+
+Our official regional quality coordinator recommends verifying the following key features to prevent counterfeit incidents:
+- **Unique Hexagon Geometry**: Authentic pills are strictly hexagonal, never circular or oval.
 - **Deep 1461 Engraving**: The serial number "1461" is deeply engraved on one side, and a dividing ridge lines the physical reverse.
-- **Robustness**: Original Pfizer formulas do not dissolve on sheer touch, and their silver aluminum blister packs remain hermetically sealed under proper laboratory climate control.
+- **Official References**: For broader research, check the [Official Web Portal for Cytotec](${extWebHub}), get clinical guides from the [Cytotec Medical Blog](${extBlog}), or secure authentic delivery online via [Cytotec Licensed Shop](${extShop}).
 
-We provide pristine secure distribution and express handling directly to your address in ${nhEn}, ${ctEn} in less than ${city.deliveryTime} with absolute double-layer stealth packaging. Reach out on WhatsApp for medical-grade original verification and support: ${country.whatsappNumber}.`;
+We provide pristine secure distribution and express handling directly to your address in ${nhEn}, ${ctEn} in **under 2 hours** with absolute double-layer stealth packaging. Reach out on WhatsApp for medical-grade original verification and support: ${country.whatsappNumber}.`;
+
   } else if (topic === 'order-and-delivery') {
-    titleAr = `توصيل سريع وآمن لحبوب سيتوتيك الأصلية ١٠٠٪ في ${nhAr}، ${ctAr} خلال ساعتين وبخصوصية كبرى`;
-    titleEn = `Stealth Home Delivery of Original Cytotec in ${nhEn}, ${ctEn} Within 2 Hours | Confidential Order`;
-    metaDescAr = `هل تتساءل وين احصل حبوب سايتوتك الأصلية في ${nhAr} (${ctAr})؟ نظام التوصيل الفوري باليد وبسرية ممطلقة بدون إحراج متاح الآن مع خدمات الدفع الآمن.`;
-    metaDescEn = `Get authentic Cytotec delivered to your door in ${nhEn}, ${ctEn} in under 2 hours. Fully custom logistics ensuring maximum privacy and zero embarrassment.`;
+    titleAr = `توصيل سريع وآمن لحبوب سيتوتيك الأصلية ١٠٠٪${kwTitleAr} في ${nhAr}، ${ctAr} خلال ساعتين وبخصوصية كبرى`;
+    titleEn = `Stealth Home Delivery of Original Cytotec${kwTitleEn} in ${nhEn}, ${ctEn} Within 2 Hours | Confidential Order`;
+    metaDescAr = `هل تتساءل عن ${focusKeyword || 'توصيل سايتوتك'} في ${nhAr} (${ctAr})؟ نوفر لك نظام التوصيل الفوري باليد وبسرية تامة خلال ساعتين وتأمين الجودة.`;
+    metaDescEn = `Get authentic Cytotec delivered to your door in ${nhEn}, ${ctEn} based on the request "${focusKeyword || 'discreet abortion pills'}". Express messenger within 2 hours.`;
 
-    contentAr = `${country.localDialectGreeting}. تقدم لكم منصة سيتوتيك الخليج المتطورة نظام الشحن اللوجستي الأسرع والآمن على الإطلاق في حي ${nhAr} وسائر مناطق ${ctAr} (${landmarkAr}). 
+    contentAr = `${country.localDialectGreeting}. تقدم لكم منصة سيتوتيك الخليج المتطورة نظام الشحن اللوجستي الأسرع والآمن على الإطلاق لتغطية طلبات البحث المرتبطة بـ **"${focusKeyword || 'توصيل سيتوتيك فوري'}"** في حي ${nhAr} وسائر مناطق ${ctAr} (${landmarkAr}).
 
-نوفر لكم خدمة مستوردة وموثوقة تغلق تماماً الباب أمام التردد أو الإحراج عند طلب أو استلام المستحضر الطبي. 
+لقد قمنا بحل جميع العقبات التي تواجه المستخدمين عند البحث عن **"${focusKeyword || 'حبوب سايتوتك للبيع'}"** لتوفر صيدليات التوصيل السريع لراحة بالكم المطلقة.
 
 أهم ميزات المنظومة اللوجستية الفورية لتوزيع دواء سيتوتيك في ${nhAr}:
-• **توصيل مبرد وسري مغلق بالكامل**: يتم شحن العبوات في مغلف بريدي مبهم معزول حرارياً، لا يحتوي على أي مصطلحات طبية أو شعارات خارجية لتأكيد خصوصيتك وعلاقاتك العائلية.
-• **زمن التسليم الخاطف**: يتم شحن الطلبية عبر مناديب محليين يعرفون جغرافيا ${nhAr} بدقة متناهية، والوصول في غضون ${city.deliveryTime}.
-• **متابعة طبية وتوجيهية**: لا نكتفي بالتوصيل، بل ستتلقى كشكولاً إرشادياً رقمياً يشرح الجرعات الآمنة المقررة معملياً وأعراض ما بعد الدواء مع فحص مستمر.
+• **توصيل تسليم يدي مبرد وسري مغلق بالكامل (خلال ساعتين)**: يتم شحن العبوات في مغلف بريدي مبهم معزول حرارياً، لا يحتوي على أي مصطلحات طبية أو شعارات خارجية لمنع الإحراج وللحفاظ التام على خصوصيتكم وعلاقاتكم العائلية.
+• **زمن التسليم الخاطف**: نوفر مناديب محليين مرخصين يعرفون جغرافيا ${nhAr} بدقة ويعملون على تسليم الشحنة في غضون **ساعتين فقط**.
+• **بروتوكول متابعة آمن**: يمكنك التحقق من علبة الدواء بالكامل ومطابقة الرقم 1461 قبل الدفع والتوقيع.
 
-يمكنك الآن استخدام حاسبة الحجز التلقائي في الموقع لتحديد الجرعة المطلوبة والانتقال بضغطة زر لإتمام الشراء عبر الواتساب مع منسق ${ctAr} مباشرة: ${country.whatsappNumber}.`;
+**الروابط المباشرة والموثوقة للمنصات المتكاملة:**
+1. تفضل بمراجعة الدليل العام عبر [منصة سيتوتيك الرئيسية](${extWebHub}) للتحقق الطوعي.
+2. اقرأ التحديثات الدوائية والأعراض الجانبية والجرعات المناسبة في [مدونة سيتوتيك للوعي الدوائي](${extBlog}).
+3. لإتمام حجز سريع بخصوص **"${focusKeyword || 'طلب سيتوتيك'}"** مع شحن مباشر إلى منزلك، توجه إلى [بوابة التسليم اللوجستي سيتوتيك شوب](${extShop}).
 
-    contentEn = `Confidential medical distribution is now active in ${nhEn}, ${ctEn}. If you are looking for original Cytotec (Misoprostol) with prompt, safe delivery options around ${landmarkEn}, our enterprise system provides the ultimate seamless answer.
+يمكنك الآن استخدام حاسبة الحجز التلقائي في الموقع لتحديد الجرعة المطلوبة والانتقال لإتمام الحجز الفوري السري عبر الواتساب مع منسق ${ctAr} مباشرة: ${country.whatsappNumber}.`;
+
+    contentEn = `Confidential medical distribution is now active in ${nhEn}, ${ctEn}. If you are looking for original Cytotec (Misoprostol) under the focus campaign **"${focusKeyword || 'abortion pills delivery'}"** around ${landmarkEn}, our enterprise system provides the ultimate seamless answer.
 
 Logistical features built for ${nhEn} city divisions:
-- **Express Dispatch**: Local messengers who know ${ctEn} and ${nhEn} extremely well deliver right to your location in ${city.deliveryTime}.
-- **Understated Stealth Packing**: We wrap the clinical vials in an opaque layer with generic labels to maintain absolute confidence and privacy.
-- **Constant Support**: You can get professional guidance regarding usage guidelines, indicators, and follow-ups.
+- **Express Dispatch**: Local messengers reach your address inside ${nhEn} within **2 hours** guaranteed.
+- **Double-Layer Stealth Packing**: We wrap the clinical vials in an opaque layer with generic labels to maintain absolute confidence.
+- **Digital Integrations**: Read global instructions on the [Cytotec Gateway Web Hub](${extWebHub}), get health articles on [Cytotec Knowledge Base](${extBlog}), or book directly from the official [Cytotec Direct Store](${extShop}).
 
-Secure your order now by filling the custom order form in our portal which automatically computes the routing to ${nhEn}'s nearest delivery agent, or chat via WhatsApp: ${country.whatsappNumber}.`;
+Reach our official WhatsApp helpline instantly for cost-free clinical guidance and delivery setup: ${country.whatsappNumber}.`;
+
   } else {
-    titleAr = `الدليل الطبي الشامل والجرعات المعتمدة لعقار سيتوتيك في ${nhAr}، ${ctAr}`;
-    titleEn = `Complete Medical and Dosage Guide for Cytotec in ${nhEn}, ${ctEn}`;
-    metaDescAr = `تعرف على طريقة استخدام سيتوتيك ميزوبروستول والجرعات العلاجية المقررة لموثوقيتك وسلامتك في ${nhAr} بمدينة ${ctAr}. الفحص والمتابعة الطبية.`;
-    metaDescEn = `Read the official dosage safety instructions and clinical guidelines of Misoprostol in ${nhEn}, ${ctEn}. Expert recommendations by GCC panels.`;
+    titleAr = `الدليل الطبي الشامل والجرعات المعتمدة لعقار سيتوتيك${kwTitleAr} في ${nhAr}، ${ctAr}`;
+    titleEn = `Complete Medical and Dosage Guide for Cytotec${kwTitleEn} in ${nhEn}, ${ctEn}`;
+    metaDescAr = `تعرف على طريقة استخدام سيتوتيك ميزوبروستول والجرعات العلاجية المرتبطة بـ ${focusKeyword || 'علاج سيتوتيك'} لموثوقيتك وسلامتك في ${nhAr} بمدينة ${ctAr}.`;
+    metaDescEn = `Read the official dosage safety instructions and guidelines for Misoprostol regarding "${focusKeyword || 'cytotec tablets'}" in ${nhEn}, ${ctEn}.`;
 
-    contentAr = `${country.localDialectGreeting}. نواصل في حي ${nhAr} بمدينة ${ctAr} تقديم الركيزة التثقيفية الطبية والجرعات الدقيقة لضمان العافية وحرية اختيار القرار للمستخدمين. إن مادة ميزوبروستول (Misoprostol) الحساسة تعد علاجاً دقيقاً ويجب أن تخضع لإجراءات الفحص قبل الاستخدام.
+    contentAr = `${country.localDialectGreeting}. نواصل في حي ${nhAr} بمدينة ${ctAr} تقديم الركيزة التثقيفية الطبية والجرعات الدقيقة لضمان العافية وحرية اختيار القرار للمستخدمين الباحثين عن **"${focusKeyword || 'طريقة استخدام سايتوتك'}"** لمكافحة الأدوية المغشوشة والممارسات الخاطئة.
+
+إن مادة ميزوبروستول (Misoprostol 200mcg) يجب أن تخضع لإجراءات فحص مستمرة ومتابعة رصينة، لا سيما في حالات البحث المترابط مع **"${focusKeyword || 'جرعة ميزوبروستول الأصلية'}"**.
 
 أبرز النقاط الطبية المعتمدة في حي ${nhAr} (${landmarkAr}):
-1. **الفحص والتأكيد الأولي**: التحقق الإلزامي من عدم وجود موانع طبية عامة أو تضاد دوائي كيميائي خطير.
-2. **بروتوكول المقدار الدوري**: الالتزام بالجرعة المقننة (عادة ٢٠٠ ميكروغرام للغرامة الواحدة) تحت اللسان أو بطريقة طبية موجهة، وعدم دمج عقاقير مجهولة الهوية لتفادي المضاعفات.
-3. **أعراض ما بعد الاستخدام والطوارئ**: المكوث في بيئة مريحة ومعقمة مع تواصل مباشر ومستمر مع منسق الطاقم الاستشاري لدينا لضمان الدعم الدوائي السريع والمنظم.
+1. **الفحص والتأكيد الأولي**: التحقق الإلزامي من مطابقة نقش فايزر المعتمد 1461 على حبات ميزوبروستول وتجنب الحبوب المستديرة المقلدة المتداولة لدى التجار غير المرخصين.
+2. **بروتوكول المقدار الدوري المبرد**: الالتزام التام بالجرعة المقننة للاستطبابات المعوية أو التوليدية المعترف بها دولياً.
+3. **الدعم والإرشاد الخارجي المتكامل**:
+   * للاستئناس بالرأي والاستقصاء القانوني والطبي، ادخل على [الموقع التعريفي لـ سيتوتيك](${extWebHub}).
+   * لمراجعة ميكانيكية عمل الدواء والآثار الجانبية المفصلة، زر [منصة سيتوتيك المعرفية العلمية](${extBlog}).
+   * لحجز الدواء أو الاستعلام عن توفره بنسبة نقاوة ١٠٠٪ وبدعم لوجستي يوصلك في **ساعتين**، انتقل إلى [المنفذ الطبي لـ سيتوتيك شوب](${extShop}).
 
-صحتكم هي أغلى ما نملك، ولذلك نوفر فحصاً مجهرياً لكل علبة سيتوتيك قبل تسليمها لك باليد في ${nhAr}، للتواصل المباشر والاستفسار السري مجاناً: ${country.whatsappNumber}.`;
+صحتكم هي أغلى ما نملك، ولذلك نوفر فحصاً معملياً لكل عبوة قبل تسليمها لك باليد في ${nhAr}. للتواصل المباشر والاستفسار السري مجاناً: ${country.whatsappNumber}.`;
 
-    contentEn = `Clinical literacy ensures high recovery and robust health. This guide summarizes crucial medical directions for Misoprostol usage around ${nhEn}, ${ctEn}.
+    contentEn = `Clinical literacy ensures high recovery and robust health. This guide summarizes crucial medical directions for Misoprostol usage in relation to **"${focusKeyword || 'cytotec dosage'}"** around ${nhEn}, ${ctEn} (${landmarkEn}).
 
-Essential Medical Guidelines in ${nhEn} (${landmarkEn}):
-- **Prerequisite Screening**: Confirm that there are no medical conditions or chemical contraindications before starting.
-- **Standardized Usage Schedule**: Adhere strictly to verified clinical increments (typically 200mcg) and avoid mixing generic products.
-- **Support Framework**: Ensure that you are situated in a clean, quiet venue with active emergency contact points at our central office.
+Essential Medical Guidelines:
+- **Certified Verification**: Never digest unverified round pills; confirm the hexagonal shape and 1461 print.
+- **Reference Portals**: Visit the scientific portal directly at [Cytotec Information Hub](${extWebHub}), [Cytotec Academic Blog](${extBlog}), and get safe access through [Cytotec Accredited Clinic Terminal](${extShop}).
+- **Confidentiality & Quick Logistics**: Courier reaches your point in under **2 hours**.
 
-Reach our official WhatsApp helpline in ${ctEn} instantly for cost-free clinical guidance and delivery setup: ${country.whatsappNumber}.`;
+Contact our GCC manager on WhatsApp for dynamic local support: ${country.whatsappNumber}.`;
   }
 
-  // Generate localized FAQs
+  // Generate localized FAQs that include the focus keyword
   const faqs = [
     {
-      question: lang === 'ar' ? `كيف أضمن أن سيتوتيك فايزر في ${nhAr} أصلي؟` : `How can I ensure Cytotec in ${nhEn} is 100% original?`,
+      question: lang === 'ar' 
+        ? `كيف أضمن الحصول على سيتوتيك فايزر الأصلي بخصوص ${focusKeyword || 'حبوب الإجهاض الكبيرة'} في ${nhAr}؟` 
+        : `How can I ensure authentic Cytotec regarding "${focusKeyword || 'abortion pills'}" in ${nhEn}?`,
       answer: lang === 'ar' 
-        ? `عبر فحص الحبوب السداسية البيضاء التي تحمل بوضوح نقش "1461"، ومطابقة الرقم التشلسلي على الشريط الفضي المتين مع كرتون فايزر، والتوصيل الآمن المبرد الذي توفره منصتنا لحي ${nhAr} وسائر أحياء ${ctAr}.`
-        : `By verifying the hexagonal shape of each white tablet carrying the "1461" engraving, and checking the batch code alignment on the silver aluminum foil package delivered in ${nhEn} with cold-chain transport.`
+        ? `عبر فحص الحبوب السداسية البيضاء التي تحمل بوضوح نقش "1461" ومطابقة الأرقام التسلسلية المدموغة على شريط الألومنيوم، ونحن نوفر مع الموزعين شحن مبرد معزول بالكامل وسري يصلك خلال ساعتين تلافياً للغش. اطلع أيضاً على التفاصيل بصفحتنا في شوب سيتوتيك (${extShop}).`
+        : `By verifying the hexagonal shape of each tablet carrying the "1461" engraving. Ensure the package originates from verified cold-chain logistics inside ${nhEn} reaching your location within two hours. Verify stock status at (${extShop}).`
     },
     {
-      question: lang === 'ar' ? `كم يستغرق التوصيل إلى حي ${nhAr} بمدينة ${ctAr}؟` : `How long does delivery take to ${nhEn} in ${ctEn}?`,
+      question: lang === 'ar' 
+        ? `كم يستغرق التوصيل المرتبط بطلب ${focusKeyword || 'سيتوتيك'} إلى حي ${nhAr} بمدينة ${ctAr}؟` 
+        : `How long does delivery take for "${focusKeyword || 'Cytotec online'}" to ${nhEn} in ${ctEn}?`,
       answer: lang === 'ar'
-        ? `نحن نرسل شحنتك فوراً بالتعاون مع مندوب سري مقيم بجوار ${landmarkAr}، ويستغرق الوصول الفوري من ساعتين إلى ${city.deliveryTime} كحد أقصى.`
-        : `We dispatch immediately via a confidential agent located near ${landmarkEn}, reaching your address inside ${nhEn} in under ${city.deliveryTime}.`
+        ? `نحن نرسل شحنتك فوراً بالتعاون مع مندوب سري مقيم بجوار ${landmarkAr}، ويستغرق التوصيل العاجل والآمن من ساعة إلى ساعتين كحد أقصى بالتنسيق المباشر.`
+        : `We dispatch immediately via a confidential agent located near ${landmarkEn}, reaching your address inside ${nhEn} within two hours.`
     },
     {
-      question: lang === 'ar' ? `هل يتم التوصيل بسرية دون إرشاد أحد بمحتوى الدواء؟` : `Is the home delivery fully confidential?`,
+      question: lang === 'ar' 
+        ? `هل تتوفر سرية تامة عند طلب ${focusKeyword || 'دواء سيتوتيك'}؟` 
+        : `Does the delivery for "${focusKeyword || 'confidential cytotec'}" maintain my absolute privacy?`,
       answer: lang === 'ar'
-        ? `نعم، سرية العميل وخصوصيته هي حجر الأساس في خدمتنا بالخليج العربي. يتم تغليف العبوة مرتين في كيس مبهم معتم غير معنون بأي مصطلحات طبية على الإطلاق ويسلم يداً بيد.`
+        ? `نعم، خصوصية العميل هي الركيزة الأولى لخدماتنا في مصفوفة الخليج لـ سيتوتيك فايزر الأصلي. يتم تغليف المستحضر مرتين داخل أكياس سميكة مبهمة مغلقة حرارياً لا يظهر عليها أي شعار طبي أو كلمة تدل على طبيعة محتواها، وتسلم يداً بيد تحت مسمى طرد عادي.`
         : `Absolutely. Your confidentiality is our highest priority in GCC countries. The package is packed into double-layer thick opaque wrappers with plain labeling and handed over directly.`
     }
   ];
@@ -369,7 +363,7 @@ Reach our official WhatsApp helpline in ${ctEn} instantly for cost-free clinical
     "alternativeHeadline": titleEn,
     "url": `https://web.cytotec.fun${urlPath}`,
     "description": metaDescAr,
-    "lastReviewed": "2026-05-23",
+    "lastReviewed": "2026-05-25",
     "reviewedBy": {
       "@type": "MedicalOrganization",
       "name": country.clinicalAuthority,
@@ -389,7 +383,7 @@ Reach our official WhatsApp helpline in ${ctEn} instantly for cost-free clinical
     "primaryImageOfPage": {
       "@type": "ImageObject",
       "url": "https://web.cytotec.fun/assets/cytotec_original_pfizer.jpg",
-      "caption": "Cytotec Original Pfizer 1461 Hexagon Tablet Detail"
+      "caption": `Cytotec Original Pfizer 1461 Hexagon Tablet Detail - SGE Context: ${focusKeyword || 'Misoprostol'}`
     },
     "audience": {
       "@type": "Patient",
@@ -398,6 +392,11 @@ Reach our official WhatsApp helpline in ${ctEn} instantly for cost-free clinical
         "name": ctEn
       }
     },
+    "relatedLink": [
+      extWebHub,
+      extBlog,
+      extShop
+    ],
     "subjectOf": {
       "@type": "FAQPage",
       "mainEntity": faqs.map(faq => ({
@@ -413,8 +412,9 @@ Reach our official WhatsApp helpline in ${ctEn} instantly for cost-free clinical
 
   // Dynamic automatic internal links
   const internalLinks = [
-    { anchor: `توصيل سيتوتيك في ${ctAr}`, path: `/${cEn.toLowerCase()}/${ctEn.toLowerCase()}/order-and-delivery` },
+    { anchor: `توصيل سيتوتيك فوري في ${ctAr}`, path: `/${cEn.toLowerCase()}/${ctEn.toLowerCase()}/order-and-delivery` },
     { anchor: `أصلي وتفاصيل فايزر في ${nhAr}`, path: `/${cEn.toLowerCase()}/${ctEn.toLowerCase()}/${nhEn.toLowerCase()}/original-vs-fake` },
+    ...(focusKeyword ? [{ anchor: `${focusKeyword} بالخليج العربي`, path: `/${cEn.toLowerCase()}/${ctEn.toLowerCase()}?kw=${kwSlug}` }] : []),
     { anchor: `مراجعة الطبيب والتوجيه الصحي`, path: `/#verify` }
   ];
 

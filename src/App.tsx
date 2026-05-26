@@ -41,11 +41,103 @@ import AnalyticsSection from './components/AnalyticsSection';
 import MedicalVerify from './components/MedicalVerify';
 import CynovaProductGallery from './components/CynovaProductGallery';
 
+export const translations = {
+  ar: {
+    brandName: 'منصة سيتوتيك الخليجية',
+    brandSpec: 'Pfizer 1461',
+    brandSub: 'CYTOTEC SGE MEDIA PLATFORM • EXPANDABLE INFRASTRUCTURE',
+    deliveryBranch: 'مندوبكم الفوري بالخليج: خلال ساعتين',
+    availLabel: 'موقعك الحالي:',
+    callHotline: 'مكالمة كادر التوجيه',
+    tabHome: '🏠 الرئيسية والوعي الطبي',
+    tabVerify: '🔬 التحقق من الرقم (1461)',
+    tabOrder: '📦 حجز عبوة فايزر',
+    tabArticles: '📰 موسوعة الأرشفة',
+    heroBadge: 'CYTOTEC MEDICAL MEDIA & SAAS PLATFORM',
+    heroTitle: 'المنصة الطبية الخليجية الأولى لتوفير سيتوتيك الأصلي فايزر ومكافحة الأدوية المقلدة',
+    heroDesc: 'نؤمن الحماية الطبية الكاملة وخدمة الشحن اللوجستي الخفي المبرد لـ ميزوبروستول سيتوتيك الأصلي (Pfizer 1461) في كافة محافظات ومدن الخليج العربي (عمان، السعودية، الإمارات، قطر، البحرين، الكويت) خلال ساعتين كحد أقصى تحت توجيه صيدلي معتمد.',
+    orderBtn: '📦 احجز عبوتك الآن (توصيل فوري خلال ساعتين)',
+    verifyBtn: '🔬 كيفية تمييز الأصلي من التقليد بالخطوات',
+    netStatus: 'حالة الشبكة اللوجستية النشطة:',
+    statusVal: 'OPERATIONAL',
+    branchLabel: 'الفرع اللوجستي المباشر:',
+    speedLabel: 'سرعة وصول المندوب:',
+    m2Hours: 'أقل من ساعتين',
+    testSec: 'تأمين وفحص مجهري للرمز 1461:',
+    securedVal: 'مؤمن بالكامل ✓',
+    whatsappLabel: 'رقم الواتساب السري الفوري:',
+    searchTitle: 'ابحث عن توفير سيتوتيك في مدينتك أو حيك السكني:',
+    searchSub: 'يقوم الكادر بفرز المندوبين لتأمين الخدمة في محافظتكم فورياً.',
+    searchPlaceholder: 'امثلة: سيتوتيك في السيب، السليمانية، دبي البرشاء...',
+    p1Title: 'فحص مجهري وضمان الأصالة',
+    p1Desc: 'نضمن مطابقة نقش فايزر المعتمد 1461 على حبات ميزوبروستول بالدقة البالغة لضمان الجودة الكيميائية وصون سلامتكم القصوى من الأدوية المقلدة.',
+    p2Title: 'شحن طبي خفي معزول',
+    p2Desc: 'يتم تسليم الشحنات مغلفة تماماً دون كتابة أي مصطلحات طبية حساسة على العلبة الخارجية لتوفير أعلى مستوى من الخصوصية والأمان.',
+    p3Title: 'توجيه صيدلاني واستشارة مجانية',
+    p3Desc: 'نرافقك خطوة بخطوة عبر كادر من الاستشاريين المتخصصين للإجابة على كامل التساؤلات بحرص، لتسهيل سبل المتابعة الطبية الآمنة.',
+    locTitle: 'دليل التغطية الطبية والتحقق الجغرافي الفوري بالخليج العربي',
+    locDesc: 'اختر بلدك ومدينتك أدناه لتأكيد سلامة ونقش علبة سيتوتيك الأصلية ١٤٦١ وتفقد سرعة وصول المندوب الطبي المباشر في حيك السكني تلافياً للأدوية مجهولة المصدر.',
+    countrySelectLabel: '1. اختر الدولة الخليجية:',
+    citySelectLabel: '2. حدد المدينة أو المحافظة السكنية:',
+    neighLabel: '3. حدد الحي السكني للفرز:',
+    statusConfirmed: 'حالة الفرز للموقع:',
+    confText: 'نشط وجاهز للتوريد خلال ساعتين ✓',
+    supportCrew: 'كادر الإشراف والتوصيل الطوعي:',
+    coorActive: 'منسق طبي معتمد + مندوب معزول مخصص',
+    orderLinkText: '📞 انقر هنا لطلب التوريد وتأكيد الحجز الفوري للموقع عبر الواتس'
+  },
+  en: {
+    brandName: 'Cytotec Gulf Platform',
+    brandSpec: 'Pfizer 1461',
+    brandSub: 'CYTOTEC SGE MEDICAL MEDIA • EXPANDABLE INFRASTRUCTURE',
+    deliveryBranch: 'Our Instant GCC Courier: Delivery within 2 Hours',
+    availLabel: 'Your Location:',
+    callHotline: 'Call Support Staff',
+    tabHome: '🏠 Home & Guidance',
+    tabVerify: '🔬 Verify Code (1461)',
+    tabOrder: '📦 Order Pfizer Pack',
+    tabArticles: '📰 Encyclopedia',
+    heroBadge: 'CYTOTEC MEDICAL MEDIA & SAAS PLATFORM',
+    heroTitle: 'The Premier GCC Medical Platform for Pfizer Cytotec Verification & Delivery',
+    heroDesc: 'We secure full medical verification and safe cold-chain stealth shipping for authentic Misoprostol Cytotec (Pfizer 1461) in Oman, Saudi Arabia, UAE, Qatar, Bahrain, and Kuwait under qualified clinical supervision within 2 hours.',
+    orderBtn: '📦 Book Your Package Now (Delivery within 2 Hours)',
+    verifyBtn: '🔬 How to Identify original vs grey market copies',
+    netStatus: 'Active Logistics Network Status:',
+    statusVal: 'OPERATIONAL',
+    branchLabel: 'Direct Logistics Branch:',
+    speedLabel: 'Delivery Courier Speed:',
+    m2Hours: 'Under 2 Hours',
+    testSec: 'Microscopic check for 1461:',
+    securedVal: 'Fully Verified ✓',
+    whatsappLabel: 'Direct Confidential WhatsApp:',
+    searchTitle: 'Search Cytotec delivery in your city or residential street:',
+    searchSub: 'Our clinical dispatchers will assign local stealth couriers to secure delivery immediately.',
+    searchPlaceholder: 'Examples: Seeb, Riyadh Suleimania, Dubai Barsha...',
+    p1Title: 'Microscopic Authentication',
+    p1Desc: 'We guarantee 105% compliance with Pfizer 1461 geometric specifications on every Misoprostol tablet to prevent damage from cheap black-market knockoffs.',
+    p2Title: 'Discreet Insulated Courier',
+    p2Desc: 'All parcels are dispatched in secure, unmarked opaque containers with zero clinical terms written outwardly to uphold absolute confidentiality.',
+    p3Title: 'Pharmaceutical Support',
+    p3Desc: 'Licensed clinical counselors guide you through safe applications, correct dosages, and private follow-up support free of charge.',
+    locTitle: 'GCC Medical Coverage Map & Geographical Dispatch Locator',
+    locDesc: 'Choose your state and province below to establish courier delivery times and explore authentication metrics in your local district.',
+    countrySelectLabel: '1. Choose GCC Country:',
+    citySelectLabel: '2. Select Direct Province:',
+    neighLabel: '3. Select Neighborhood Area:',
+    statusConfirmed: 'Active Dispatch Status:',
+    confText: 'Verified Active & ready for express courier within 2 hours ✓',
+    supportCrew: 'Assigned Coordinator & Clinic Crew:',
+    coorActive: 'Certified Clinical Manager + Designated Discreet Courier',
+    orderLinkText: '📞 Press to request express courier to this location via WhatsApp'
+  }
+};
+
 export default function App() {
   // Navigation & Location states
   const [selectedCountryCode, setSelectedCountryCode] = useState<string>('OM');
   const [currentTab, setCurrentTab] = useState<'home' | 'programmatic' | 'verify' | 'order' | 'articles' | 'crm' | 'analytics' | 'admin'>('home');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [lang, setLang] = useState<'ar' | 'en'>('ar');
   
   // Interactive Geo Directory States
   const [geoSelectedCountryCode, setGeoSelectedCountryCode] = useState<string>('OM');
@@ -82,6 +174,13 @@ export default function App() {
   const [manualContent, setManualContent] = useState('');
   const [manualKeywords, setManualKeywords] = useState('');
   const [manualDialect, setManualDialect] = useState('هوية طبية عامة');
+  const [manualIdToEdit, setManualIdToEdit] = useState<string | null>(null);
+  const [manualAuthor, setManualAuthor] = useState<string>('المدير العام');
+  const [manualCountry, setManualCountry] = useState<string>('all');
+  const [manualRegion, setManualRegion] = useState<string>('');
+  const [employeeRole, setEmployeeRole] = useState<'admin' | 'publisher' | 'editor'>('admin');
+  const [adminArticleSearch, setAdminArticleSearch] = useState<string>('');
+  const [adminArticleCategory, setAdminArticleCategory] = useState<string>('all');
 
   // Ordering form
   const [orderName, setOrderName] = useState<string>('');
@@ -322,26 +421,48 @@ export default function App() {
       alert("عنوان المقال والمحتوى مطلوبان");
       return;
     }
+
+    if (employeeRole === 'editor' && !manualIdToEdit) {
+      alert("⚠️ عذراً، وظيفتك الحالية (محرر وموظف) لا تخولك بنشر كتل مقالات جديدة ذاتياً. يمكنك فقط تعديل ومراجعة المقالات القائمة لتجنب تضارب الـ SEO.");
+      return;
+    }
+
     try {
-      const res = await fetch('/api/articles', {
-        method: 'POST',
+      const url = manualIdToEdit ? `/api/articles/${manualIdToEdit}` : '/api/articles';
+      const method = manualIdToEdit ? 'PUT' : 'POST';
+
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: manualTitle,
           category: manualCategory,
           content: manualContent,
-          country: newKeywordCountry,
+          country: manualCountry,
+          region: manualRegion,
           keywords: manualKeywords,
           dialect: manualDialect,
-          author: 'دليل الإدارة'
+          author: manualAuthor || 'المدير العام'
         })
       });
       if (res.ok) {
         setManualTitle('');
         setManualContent('');
         setManualKeywords('');
+        setManualRegion('');
+        setManualDialect('هوية طبية عامة');
+        setManualAuthor('المدير العام');
+        setManualCountry('all');
+        
+        if (manualIdToEdit) {
+          alert("✓ تم حفظ تعديلات المقال بنجاح وتحديث الأرشفة فوراً!");
+          setManualIdToEdit(null);
+        } else {
+          alert("✓ تم نشر وإنتاج المقال الطبي الجديد بنجاح في الموقع!");
+        }
         fetchArticles();
-        alert("تم نشر المقال اليدوي بنجاح!");
+      } else {
+        alert("فشلت عملية حفظ ونشر المقال. يرجى مراجعة قيم الخوادم.");
       }
     } catch (err) {
       console.error("Manual publish err", err);
@@ -349,16 +470,53 @@ export default function App() {
   };
 
   const handleDeleteArticle = async (id: string) => {
-    if (!confirm("هل أنت متأكد من حذف هذا المقال الفهرس؟")) return;
+    if (employeeRole === 'editor' || employeeRole === 'publisher') {
+      alert("⚠️ عذراً، صلاحيات منصبك الحالي لا تسمح لك بالحذف النهائي للمحتوى الطبي والـ SGE لمنع أي أخطاء في الأرشفة.");
+      return;
+    }
+    if (!confirm("هل أنت متأكد من حذف هذا المقال الفهرس؟ سيتم إزالته فوراً من السيرفر والخريطة السحابية.")) return;
     try {
       const res = await fetch(`/api/articles/${id}`, { method: 'DELETE' });
       if (res.ok) {
         fetchArticles();
         if (activeArticleId === id) setActiveArticleId(null);
+        alert("🗑️ تم حذف وإلغاء فهرسة المقال بنجاح من النظام السحابي.");
       }
     } catch (err) {
       console.error("Failed clear article", err);
     }
+  };
+
+  const handleStartEdit = (art: Article) => {
+    setManualIdToEdit(art.id);
+    setManualTitle(art.title);
+    setManualCategory(art.category);
+    setManualContent(art.content);
+    setManualKeywords(Array.isArray(art.keywords) ? art.keywords.join(', ') : art.keywords);
+    setManualDialect(art.dialect || 'هوية طبية عامة');
+    setManualAuthor(art.author || 'المدير العام');
+    setManualCountry(art.country || 'all');
+    setManualRegion(art.region || '');
+    
+    setTimeout(() => {
+      const formEl = document.getElementById('manual-article-editor-form');
+      if (formEl) {
+        formEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 100);
+    alert(`✏️ تم تحميل بيانات المقال "${art.title}" في نموذج التعديل بالأسفل لبدء التعديل والتحكم حقيقياً.`);
+  };
+
+  const handleCancelEdit = () => {
+    setManualIdToEdit(null);
+    setManualTitle('');
+    setManualCategory('الوعي الطبي والتحقق');
+    setManualContent('');
+    setManualKeywords('');
+    setManualDialect('هوية طبية عامة');
+    setManualAuthor('المدير العام');
+    setManualCountry('all');
+    setManualRegion('');
   };
 
   const handleAdminAuth = (e: React.FormEvent) => {
@@ -467,7 +625,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-teal-500 selection:text-slate-950 flex flex-col antialiased relative" dir="rtl">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-teal-500 selection:text-slate-950 flex flex-col antialiased relative" dir={lang === 'ar' ? 'rtl' : 'ltr'}>
       
       {/* Background ambient backglow elements */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none" />
@@ -484,10 +642,10 @@ export default function App() {
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-bold text-base sm:text-lg tracking-tight bg-gradient-to-l from-slate-50 to-slate-200 bg-clip-text text-transparent">منصة سيتوتيك الخليجية</span>
-                <span className="bg-teal-500/10 text-teal-400 text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded border border-teal-500/20 font-bold">Pfizer 1461</span>
+                <span className="font-bold text-base sm:text-lg tracking-tight bg-gradient-to-l from-slate-50 to-slate-200 bg-clip-text text-transparent">{translations[lang].brandName}</span>
+                <span className="bg-teal-500/10 text-teal-400 text-[9px] uppercase tracking-widest px-1.5 py-0.5 rounded border border-teal-500/20 font-bold">{translations[lang].brandSpec}</span>
               </div>
-              <p className="text-[9px] text-slate-500 font-mono tracking-wider text-right">CYTOTEC SGE MEDIA PLATFORM • EXPANDABLE INFRASTRUCTURE</p>
+              <p className="text-[9px] text-slate-500 font-mono tracking-wider">{translations[lang].brandSub}</p>
             </div>
           </div>
 
@@ -495,7 +653,7 @@ export default function App() {
           <div className="hidden xl:flex items-center gap-5 text-xs text-slate-300 bg-slate-950/40 px-3 py-1.5 rounded-lg border border-slate-800">
             <div className="flex items-center gap-1.5">
               <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>مندوبكم الفوري بالخليج: <strong>خلال ساعتين</strong></span>
+              <span>{translations[lang].deliveryBranch}</span>
             </div>
             <div className="w-px h-3.5 bg-slate-800" />
             <div className="flex items-center gap-1">
@@ -506,18 +664,38 @@ export default function App() {
 
           {/* Quick actions for local routing dropdown state */}
           <div className="flex items-center gap-2">
-            <span className="text-xs text-slate-400 hidden sm:inline">موقعك الحالي:</span>
+            
+            {/* Bilingual language switcher */}
+            <button
+              type="button"
+              onClick={() => {
+                const nextLang = lang === 'ar' ? 'en' : 'ar';
+                setLang(nextLang);
+                if (nextLang === 'en') {
+                  setActiveArticleId('cytotec-uses-and-notes');
+                  setCurrentTab('articles');
+                } else {
+                  setActiveArticleId('art-1');
+                }
+              }}
+              className="flex items-center gap-1 bg-slate-900 hover:bg-slate-850 text-slate-200 border border-slate-800 px-2.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer"
+            >
+              <Globe className="w-3.5 h-3.5 text-teal-400" />
+              <span>{lang === 'ar' ? 'English' : 'العربية'}</span>
+            </button>
+
+            <span className="text-xs text-slate-400 hidden sm:inline">{translations[lang].availLabel}</span>
             <select 
               value={selectedCountryCode}
               onChange={(e) => {
                 setSelectedCountryCode(e.target.value);
                 setOrderRegion(''); // Reset region input to match country selection
               }}
-              className="bg-slate-950 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 border border-slate-800 focus:outline-none focus:border-teal-400 cursor-pointer text-right min-w-[120px]"
+              className="bg-slate-950 text-slate-200 text-xs rounded-lg px-2.5 py-1.5 border border-slate-800 focus:outline-none focus:border-teal-400 cursor-pointer min-w-[120px]"
             >
               {GCC_ST_CONFIGS.map(item => (
                 <option key={item.code} value={item.code}>
-                  📍 {item.nameAr}
+                  📍 {lang === 'ar' ? item.nameAr : item.nameEn}
                 </option>
               ))}
             </select>
@@ -525,10 +703,10 @@ export default function App() {
               href={buildQuickSupportLink()} 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center gap-1.5 bg-green-500 hover:bg-green-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition duration-150"
+              className="flex items-center gap-1.5 bg-green-500 hover:bg-green-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs transition duration-150 whitespace-nowrap"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>مكالمة كادر التوجيه</span>
+              <span>{translations[lang].callHotline}</span>
             </a>
           </div>
         </div>
@@ -536,26 +714,26 @@ export default function App() {
         {/* COMPREHENSIVE PLATFORM CAPABILITIES TABS */}
         <div className="bg-slate-950 border-t border-slate-850">
           <div className="max-w-7xl mx-auto px-4 flex items-center justify-between text-xs sm:text-sm font-medium overflow-x-auto whitespace-nowrap scrollbar-none py-1">
-            <div className="flex items-center space-x-reverse space-x-1 sm:space-x-2 py-1">
+            <div className={`flex items-center py-1 ${lang === 'ar' ? 'space-x-reverse space-x-1 sm:space-x-2' : 'space-x-1 sm:space-x-2'}`}>
               <button 
                 onClick={() => { setCurrentTab('home'); setActiveArticleId(null); }}
                 className={`px-3 py-1.5 rounded-md transition duration-150 ${currentTab === 'home' ? 'bg-teal-500/10 text-teal-300 border border-teal-500/20' : 'text-slate-400 hover:text-slate-200'}`}
               >
-                🏠 الرئيسية والوعي الطبي
+                {translations[lang].tabHome}
               </button>
 
               <button 
                 onClick={() => { setCurrentTab('verify'); }}
-                className={`px-3 py-1.5 rounded-md transition duration-150 ${currentTab === 'verify' ? 'bg-teal-500/10 text-teal-300 border border-teal-500/20' : 'text-slate-400 hover:text-slate-200'}`}
+                className={`px-3 py-1.5 rounded-md transition duration-150 ${currentTab === 'verify' ? 'bg-teal-505/10 text-teal-300 border border-teal-500/20' : 'text-slate-400 hover:text-slate-200'}`}
               >
-                🔬 التحقق من الرقم (1461)
+                {translations[lang].tabVerify}
               </button>
 
               <button 
                 onClick={() => { setCurrentTab('order'); }}
                 className={`px-3 py-1.5 rounded-md transition duration-150 ${currentTab === 'order' ? 'bg-teal-500/10 text-teal-300 border border-teal-500/20' : 'text-slate-400 hover:text-slate-200'}`}
               >
-                📦 حجز عبوة فايزر
+                {translations[lang].tabOrder}
               </button>
 
               <button 
@@ -653,106 +831,70 @@ export default function App() {
 
               {/* INTELLIGENT SEARCH DETECTOR BAR */}
               <div className="bg-slate-900 border border-slate-800 p-5 rounded-2xl space-y-4">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div className={`flex flex-col sm:flex-row items-center justify-between gap-3 ${lang === 'ar' ? '' : 'sm:flex-row-reverse'}`}>
                   <div>
-                    <h3 className="text-sm font-bold text-white">ابحث عن توفير سيتوتيك في مدينتك أو حيك السكني:</h3>
-                    <p className="text-[11px] text-slate-450">يقوم الكادر بفرز المندوبين لتأمين الخدمة في محافظتكم فورياً.</p>
+                    <h3 className="text-sm font-bold text-white">{translations[lang].searchTitle}</h3>
+                    <p className="text-[11px] text-slate-450">{translations[lang].searchSub}</p>
                   </div>
 
                   <div className="w-full sm:max-w-md relative">
-                    <Search className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-500 w-4 h-4" />
+                    <Search className={`absolute top-1/2 -translate-y-1/2 text-slate-500 w-4 h-4 ${lang === 'ar' ? 'right-3.5' : 'left-3.5'}`} />
                     <input
                       type="text"
                       value={searchQuery}
                       onChange={(e) => handleIntelligentSearchChange(e.target.value)}
-                      placeholder="امثلة: سيتوتيك في السيب، السليمانية، دبي البرشاء..."
-                      className="w-full bg-slate-950 border border-slate-800 focus:border-teal-400 rounded-xl pr-10 pl-4 py-2 text-xs focus:outline-none text-right text-slate-200"
+                      placeholder={translations[lang].searchPlaceholder}
+                      className={`w-full bg-slate-950 border border-slate-800 focus:border-teal-400 rounded-xl py-2 text-xs focus:outline-none text-slate-200 ${lang === 'ar' ? 'pr-10 pl-4 text-right' : 'pl-10 pr-4 text-left'}`}
                     />
                   </div>
                 </div>
 
                 {/* If matching keyword was typed */}
                 {searchQuery.trim().length > 1 && (
-                  <div className="p-3 bg-teal-950/20 border border-teal-500/20 rounded-xl flex items-center justify-between text-xs gap-3">
-                    <span className="text-slate-300">💡 تم توجيه الكادر وتخصيص المندوب لخدمة منطقتكم في <strong>{searchQuery}</strong> تلقائياً!</span>
+                  <div className={`p-3 bg-teal-950/20 border border-teal-500/20 rounded-xl flex items-center justify-between text-xs gap-3 ${lang === 'ar' ? '' : 'flex-row-reverse'}`}>
+                    {lang === 'ar' ? (
+                      <span className="text-slate-300">💡 تم توجيه الكادر وتخصيص المندوب لخدمة منطقتكم في <strong>{searchQuery}</strong> تلقائياً!</span>
+                    ) : (
+                      <span className="text-slate-300">💡 Clinical dispatchers successfully assigned a dedicated courier for your neighborhood <strong>{searchQuery}</strong> automatically!</span>
+                    )}
                     <button
+                      type="button"
                       onClick={() => {
                         const q = searchQuery;
                         setOrderRegion(q);
                         setCurrentTab('order');
                       }}
-                      className="bg-teal-500 hover:bg-teal-600 text-slate-950 font-black px-4 py-1.5 rounded-lg text-[11px] transition"
+                      className="bg-teal-500 hover:bg-teal-600 text-slate-950 font-black px-4 py-1.5 rounded-lg text-[11px] transition cursor-pointer"
                     >
-                      إرسال حجز الطلب للمنطقة 📦
+                      {lang === 'ar' ? 'إرسال حجز الطلب للمنطقة 📦' : 'Secure Order for Area 📦'}
                     </button>
                   </div>
                 )}
               </div>
 
-              {/* THREE DYNAMIC BRAND PILLARS */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-                  <span className="text-teal-400 font-bold text-xs uppercase block">HIGHLY SECURED</span>
-                  <h3 className="font-bold text-sm text-slate-100">فحص مجهري وضمان الأصالة</h3>
-                  <p className="text-xs text-slate-450 leading-relaxed">
-                    نضمن مطابقة نقش فايزر المعتمد 1461 على حبات ميزوبروستول بالدقة البالغة لضمان الجودة الكيميائية وصون سلامتكم القصوى من الأدوية المقلدة.
-                  </p>
-                </div>
-
-                <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-                  <span className="text-sky-400 font-bold text-xs uppercase block">STEALTH LOGISTICS</span>
-                  <h3 className="font-bold text-sm text-slate-100">شحن طبي خفي معزول</h3>
-                  <p className="text-xs text-slate-450 leading-relaxed">
-                    يتم تسليم الشحنات مغلفة تماماً دون كتابة أي مصطلحات طبية حساسة على العلبة الخارجية لتوفير أعلى مستوى من الخصوصية والأمان.
-                  </p>
-                </div>
-
-                <div className="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-                  <span className="text-emerald-400 font-bold text-xs uppercase block">PHARMACY Support</span>
-                  <h3 className="font-bold text-sm text-slate-100">توجيه صيدلاني واستشارة مجانية</h3>
-                  <p className="text-xs text-slate-450 leading-relaxed">
-                    نرافقك خطوة بخطوة عبر كادر من الاستشاريين المتخصصين للإجابة على كامل التساؤلات بحرص، لتسهيل سبل المتابعة الطبية الآمنة.
-                  </p>
-                </div>
-
-              </div>
-
-              {/* REAL PRODUCT & SERVICES GALLERY SHOWCASE REPRESENTING ALL 11 PHOTOS */}
-              <CynovaProductGallery 
-                onTriggerOrderTab={(region) => {
-                  setOrderRegion(region);
-                  setCurrentTab('order');
-                  setTimeout(() => {
-                    const orderRoot = document.getElementById('order-tab-root');
-                    if (orderRoot) {
-                      orderRoot.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }, 150);
-                }}
-              />
-
               {/* GEOGRAPHICAL COVERAGE DIRECTORY WIDGET FOR visitors & SEO CRAWLERS */}
               <div className="bg-slate-900 border border-slate-800/80 p-6 sm:p-8 rounded-2xl space-y-6 shadow-xl">
-                <div className="space-y-1.5 text-right">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-3 flex-wrap gap-2">
+                <div className={`space-y-1.5 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                  <div className={`flex items-center justify-between border-b border-slate-800 pb-3 flex-wrap gap-2 ${lang === 'ar' ? '' : 'flex-row-reverse'}`}>
                     <span className="px-2.5 py-1 bg-teal-500/10 text-teal-400 font-mono text-[10px] sm:text-xs rounded-full border border-teal-500/20 font-bold">DIRECTORY & LOCATOR</span>
                     <h3 className="text-sm font-black text-slate-100 flex items-center gap-1.5">
                       <Globe className="w-4.5 h-4.5 text-teal-400" />
-                      <span>دليل التغطية الطبية والتحقق الجغرافي الفوري بالخليج العربي</span>
+                      <span>{translations[lang].locTitle}</span>
                     </h3>
                   </div>
                   <p className="text-xs text-slate-405 leading-relaxed">
-                    اختر بلدك ومدينتك أدناه لتأكيد سلامة ونقش علبة سيتوتيك الأصلية ١٤٦١ وتفقد سرعة وصول المندوب الطبي المباشر في حيك السكني تلافياً للأدوية مجهولة المصدر.
+                    {translations[lang].locDesc}
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-                  {/* Country & City Locators */}
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                  
+                  {/* Selectors column */}
                   <div className="md:col-span-5 space-y-4">
+
                     {/* Country selector */}
-                    <div className="space-y-2 text-right">
-                      <span className="text-xs text-slate-400 font-bold block">1. اختر الدولة الخليجية:</span>
+                    <div className={`space-y-2 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                      <span className="text-xs text-slate-400 font-bold block">{translations[lang].countrySelectLabel}</span>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                         {PROGRAMMATIC_GCC_DATA.map((country) => (
                           <button
@@ -764,9 +906,9 @@ export default function App() {
                               setGeoSelectedCityName(newCity.nameAr);
                               setGeoSelectedNeighborhoodName(newCity.neighborhoods[0].nameAr);
                             }}
-                            className={`py-2 px-3 rounded-xl text-xs text-center font-bold transition border truncate flex items-center justify-center gap-1.5 ${geoSelectedCountryCode === country.code ? 'bg-teal-500/10 text-teal-350 border-teal-500/40 shadow shadow-teal-500/10' : 'bg-slate-950 border-slate-850 text-slate-400 hover:border-slate-800'}`}
+                            className={`py-2 px-3 rounded-xl text-xs text-center font-bold transition border truncate flex items-center justify-center gap-1.5 cursor-pointer ${geoSelectedCountryCode === country.code ? 'bg-teal-500/10 text-teal-350 border-teal-500/40 shadow shadow-teal-500/10' : 'bg-slate-950 border-slate-850 text-slate-400 hover:border-slate-800'}`}
                           >
-                            <span>{country.nameAr}</span>
+                            <span>{lang === 'ar' ? country.nameAr : country.nameEn}</span>
                           </button>
                         ))}
                       </div>
@@ -776,9 +918,9 @@ export default function App() {
                     {(() => {
                       const dynamicCountry = PROGRAMMATIC_GCC_DATA.find(c => c.code === geoSelectedCountryCode) || PROGRAMMATIC_GCC_DATA[0];
                       return (
-                        <div className="space-y-2 text-right">
-                          <span className="text-xs text-slate-400 font-bold block">2. المحافظة / المدينة:</span>
-                          <div className="flex flex-wrap gap-1.5">
+                        <div className={`space-y-2 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                          <span className="text-xs text-slate-400 font-bold block">{translations[lang].citySelectLabel}</span>
+                          <div className={`flex flex-wrap gap-1.5 ${lang === 'ar' ? 'justify-start' : 'justify-start'}`}>
                             {dynamicCountry.cities.map((city) => (
                               <button
                                 key={city.nameAr}
@@ -787,9 +929,9 @@ export default function App() {
                                   setGeoSelectedCityName(city.nameAr);
                                   setGeoSelectedNeighborhoodName(city.neighborhoods[0].nameAr);
                                 }}
-                                className={`py-1.5 px-3 rounded-xl text-xs font-bold transition border ${geoSelectedCityName === city.nameAr ? 'bg-sky-500/10 text-sky-350 border-sky-500/35' : 'bg-slate-950 border-slate-850 text-slate-400 hover:border-slate-800'}`}
+                                className={`py-1.5 px-3 rounded-xl text-xs font-bold transition border cursor-pointer ${geoSelectedCityName === city.nameAr || geoSelectedCityName === city.nameEn ? 'bg-sky-500/10 text-sky-350 border-sky-500/35' : 'bg-slate-950 border-slate-850 text-slate-400 hover:border-slate-800'}`}
                               >
-                                📍 {city.nameAr}
+                                📍 {lang === 'ar' ? city.nameAr : city.nameEn}
                               </button>
                             ))}
                           </div>
@@ -802,18 +944,18 @@ export default function App() {
                       const dynamicCountry = PROGRAMMATIC_GCC_DATA.find(c => c.code === geoSelectedCountryCode) || PROGRAMMATIC_GCC_DATA[0];
                       const dynamicCity = dynamicCountry.cities.find(c => c.nameAr === geoSelectedCityName || c.nameEn === geoSelectedCityName) || dynamicCountry.cities[0];
                       return (
-                        <div className="space-y-2 text-right">
-                          <span className="text-xs text-slate-400 font-bold block">3. الأحياء الفرعية النشطة:</span>
+                        <div className={`space-y-2 ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
+                          <span className="text-xs text-slate-400 font-bold block">{translations[lang].neighLabel}</span>
                           <div className="grid grid-cols-2 gap-1.5">
                             {dynamicCity.neighborhoods.map((nh) => (
                               <button
                                 key={nh.nameAr}
                                 type="button"
                                 onClick={() => setGeoSelectedNeighborhoodName(nh.nameAr)}
-                                className={`p-2 rounded-xl text-xs transition border text-right truncate flex items-center gap-1 justify-between ${geoSelectedNeighborhoodName === nh.nameAr ? 'bg-amber-500/10 text-amber-300 border-amber-500/35 font-bold' : 'bg-slate-950 border-slate-850 text-slate-400'}`}
+                                className={`p-2 rounded-xl text-xs transition border truncate flex items-center gap-1 justify-between cursor-pointer ${geoSelectedNeighborhoodName === nh.nameAr || geoSelectedNeighborhoodName === nh.nameEn ? 'bg-amber-500/10 text-amber-305 border-amber-500/35 font-bold' : 'bg-slate-950 border-slate-850 text-slate-400 hover:border-slate-800'} ${lang === 'ar' ? 'text-right flex-row' : 'text-left flex-row-reverse'}`}
                               >
-                                <span className="truncate">🏡 {nh.nameAr}</span>
-                                <span className="text-[9px] opacity-60">مغطى</span>
+                                <span className="truncate">🏡 {lang === 'ar' ? nh.nameAr : nh.nameEn}</span>
+                                <span className="text-[9px] opacity-60">{lang === 'ar' ? 'مغطى' : 'Active'}</span>
                               </button>
                             ))}
                           </div>
@@ -826,45 +968,45 @@ export default function App() {
                   {(() => {
                     const country = PROGRAMMATIC_GCC_DATA.find(c => c.code === geoSelectedCountryCode) || PROGRAMMATIC_GCC_DATA[0];
                     const city = country.cities.find(c => c.nameAr === geoSelectedCityName || c.nameEn === geoSelectedCityName) || country.cities[0];
-                    const neighborhood = city.neighborhoods.find(n => n.nameAr === geoSelectedNeighborhoodName) || city.neighborhoods[0];
+                    const neighborhood = city.neighborhoods.find(n => n.nameAr === geoSelectedNeighborhoodName || n.nameEn === geoSelectedNeighborhoodName) || city.neighborhoods[0];
                     return (
-                      <div className="md:col-span-7 bg-slate-950 border border-slate-850 p-5 rounded-2xl flex flex-col justify-between space-y-4 shadow-inner text-right relative overflow-hidden">
+                      <div className={`md:col-span-7 bg-slate-950 border border-slate-850 p-5 rounded-2xl flex flex-col justify-between space-y-4 shadow-inner relative overflow-hidden ${lang === 'ar' ? 'text-right' : 'text-left'}`}>
                         {/* Background pattern */}
                         <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-teal-500/5 to-transparent rounded-full blur-xl pointer-events-none" />
                         
                         <div className="space-y-3">
-                          <div className="flex items-center justify-between border-b border-slate-900 pb-2">
+                          <div className={`flex items-center justify-between border-b border-slate-900 pb-2 ${lang === 'ar' ? 'flex-row' : 'flex-row-reverse'}`}>
                             <span className="text-emerald-400 text-xs font-bold leading-none flex items-center gap-1 px-2 py-0.5 bg-emerald-500/10 rounded-full">
                               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                              <span>متاح للتسليم الفوري ⚡</span>
+                              <span>{lang === 'ar' ? 'متاح للتسليم الفوري ⚡' : 'In Stock for 2-Hr Delivery ⚡'}</span>
                             </span>
-                            <h4 className="font-bold text-xs text-slate-450">تذكرة توزيع المسار اللوجستي</h4>
+                            <h4 className="font-bold text-xs text-slate-450">{lang === 'ar' ? 'تذكرة توزيع المسار اللوجستي' : 'Logistics Route Ticket'}</h4>
                           </div>
 
                           <div className="space-y-2.5 text-xs">
-                            <div className="flex justify-between border-b border-slate-900/60 pb-1.5">
-                              <span className="text-slate-455">بلد الترخيص والاستيراد:</span>
-                              <strong className="text-slate-100 font-bold">{country.nameAr} ({country.clinicalAuthority})</strong>
+                            <div className={`flex justify-between border-b border-slate-900/60 pb-1.5 ${lang === 'ar' ? 'flex-row' : 'flex-row-reverse'}`}>
+                              <span className="text-slate-455">{lang === 'ar' ? 'بلد الترخيص والاستيراد:' : 'Import & Licensure State:'}</span>
+                              <strong className="text-slate-100 font-bold">{lang === 'ar' ? country.nameAr : country.nameEn} ({country.clinicalAuthority})</strong>
                             </div>
-                            <div className="flex justify-between border-b border-slate-900/60 pb-1.5">
-                              <span className="text-slate-455">المدينة الرئيسية الحالية:</span>
-                              <strong className="text-slate-100 font-bold">{city.nameAr}</strong>
+                            <div className={`flex justify-between border-b border-slate-900/60 pb-1.5 ${lang === 'ar' ? 'flex-row' : 'flex-row-reverse'}`}>
+                              <span className="text-slate-455">{lang === 'ar' ? 'المدينة الرئيسية الحالية:' : 'Current Main City:'}</span>
+                              <strong className="text-slate-100 font-bold">{lang === 'ar' ? city.nameAr : city.nameEn}</strong>
                             </div>
-                            <div className="flex justify-between border-b border-slate-900/60 pb-1.5">
-                              <span className="text-slate-455">حي التوصيل المباشر:</span>
-                              <strong className="text-teal-400 font-bold">{neighborhood.nameAr}</strong>
+                            <div className={`flex justify-between border-b border-slate-900/60 pb-1.5 ${lang === 'ar' ? 'flex-row' : 'flex-row-reverse'}`}>
+                              <span className="text-slate-455">{lang === 'ar' ? 'حي التوصيل المباشر:' : 'Direct Neighborhood Area:'}</span>
+                              <strong className="text-teal-400 font-bold">{lang === 'ar' ? neighborhood.nameAr : neighborhood.nameEn}</strong>
                             </div>
-                            <div className="flex justify-between border-b border-slate-900/60 pb-1.5">
-                              <span className="text-slate-455">نقطة المعلم المرجعي الشهير:</span>
-                              <strong className="text-slate-200 font-normal">{neighborhood.landmarkAr}</strong>
+                            <div className={`flex justify-between border-b border-slate-900/60 pb-1.5 ${lang === 'ar' ? 'flex-row' : 'flex-row-reverse'}`}>
+                              <span className="text-slate-455">{lang === 'ar' ? 'نقطة المعلم المرجعي الشهير:' : 'Nearby Prominent Landmark:'}</span>
+                              <strong className="text-slate-200 font-normal">{lang === 'ar' ? neighborhood.landmarkAr : (neighborhood.landmarkEn || neighborhood.landmarkAr)}</strong>
                             </div>
-                            <div className="flex justify-between border-b border-slate-900/60 pb-1.5">
-                              <span className="text-slate-455">المدة المتوقعة لوصول المناديب باليد:</span>
-                              <strong className="text-amber-400 font-bold">{city.deliveryTime}</strong>
+                            <div className={`flex justify-between border-b border-slate-900/60 pb-1.5 ${lang === 'ar' ? 'flex-row' : 'flex-row-reverse'}`}>
+                              <span className="text-slate-455">{lang === 'ar' ? 'المدة المتوقعة لوصول المناديب باليد:' : 'Expected Courier Arrival Time:'}</span>
+                              <strong className="text-amber-400 font-bold">{lang === 'ar' ? city.deliveryTime : 'Within 2 Hours (Stealth Courier)'}</strong>
                             </div>
-                            <div className="flex justify-between">
-                              <span className="text-slate-455">دليل فرز النقش وتحقق العلبة:</span>
-                              <strong className="text-emerald-400 font-black">بالموثوقية المجهرية 🔬 (1461 Verifier Active)</strong>
+                            <div className={`flex justify-between ${lang === 'ar' ? 'flex-row' : 'flex-row-reverse'}`}>
+                              <span className="text-slate-455">{lang === 'ar' ? 'دليل فرز النقش وتحقق العلبة:' : 'Blister & Stamp Verification:'}</span>
+                              <strong className="text-emerald-400 font-black">{lang === 'ar' ? 'بالموثوقية المجهرية 🔬 (1461 Verifier Active)' : 'Clinical Microscope Check 🔬 (1461 Active)'}</strong>
                             </div>
                           </div>
                         </div>
@@ -873,7 +1015,7 @@ export default function App() {
                           <button
                             type="button"
                             onClick={() => {
-                              setOrderRegion(`${city.nameAr} - حي ${neighborhood.nameAr} (${neighborhood.landmarkAr})`);
+                              setOrderRegion(`${lang === 'ar' ? city.nameAr : city.nameEn} - ${lang === 'ar' ? 'حي' : 'District'} ${lang === 'ar' ? neighborhood.nameAr : neighborhood.nameEn} (${lang === 'ar' ? neighborhood.landmarkAr : (neighborhood.landmarkEn || neighborhood.landmarkAr)})`);
                               setOrderPhone('');
                               setOrderName('');
                               setCurrentTab('order');
@@ -883,19 +1025,19 @@ export default function App() {
                                 if (element) element.scrollIntoView({ behavior: 'smooth' });
                               }, 150);
                             }}
-                            className="bg-teal-500 hover:bg-teal-600 text-slate-950 font-black py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-lg shadow-teal-500/10 active:scale-95"
+                            className="bg-teal-500 hover:bg-teal-600 text-slate-950 font-black py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-lg shadow-teal-500/10 active:scale-95 cursor-pointer"
                           >
-                            <span>📦 طلب الشحن الفوري لهدا الحي</span>
+                            <span>{lang === 'ar' ? '📦 طلب الشحن الفوري لهذا الحي' : '📦 Order Stealth Shipping Here'}</span>
                           </button>
 
                           <a
-                            href={`https://wa.me/${country.whatsappNumber.replace('+', '')}?text=${encodeURIComponent(`مرحباً.. أود حجز وتوصيل حبوب سيتوتيك ميزوبروستول الأصلي فايزر ١٤٦١ في حي (${neighborhood.nameAr}) بمدينة (${city.nameAr}). يرجى توجيه مندوب التوصيل الفوري.`)}`}
+                            href={`https://wa.me/${country.whatsappNumber.replace('+', '')}?text=${encodeURIComponent(lang === 'ar' ? `مرحباً.. أود حجز وتوصيل حبوب سيتوتيك ميزوبروستول الأصلي فايزر ١٤٦١ في حي (${neighborhood.nameAr}) بمدينة (${city.nameAr}). يرجى توجيه مندوب التوصيل الفوري.` : `Hello.. I want to book and deliver original Pfizer Cytotec 200mcg (1461) to neighborhood (${neighborhood.nameEn}) in city (${city.nameEn}). Please dispatch the express courier.`)}`}
                             target="_blank"
                             rel="noreferrer"
-                            className="bg-green-500 hover:bg-green-600 text-slate-950 font-black py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-1.5 active:scale-95 text-center"
+                            className="bg-green-500 hover:bg-green-600 text-slate-950 font-black py-2.5 px-3 rounded-xl text-xs transition flex items-center justify-center gap-1.5 active:scale-95 text-center cursor-pointer"
                           >
                             <Phone className="w-3.5 h-3.5" />
-                            <span>تواصل مع مندوب الخليج</span>
+                            <span>{lang === 'ar' ? 'تواصل مع مندوب الخليج' : 'Message Local GCC Courier'}</span>
                           </a>
                         </div>
                       </div>
@@ -951,7 +1093,7 @@ export default function App() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
             >
-              <MedicalVerify />
+              <MedicalVerify lang={lang} />
             </motion.div>
           )}
 
@@ -1183,7 +1325,7 @@ export default function App() {
                             <div className="bg-slate-950 p-4 rounded-xl border border-slate-850 text-xs text-slate-400 space-y-1.5">
                               <span className="text-[10px] text-teal-450 block">🏷️ البيانات الوصفية للأرشفة جوجل:</span>
                               <p>الهوية المستهدفة: <strong>{art.dialect}</strong></p>
-                              <p>روابط الكلمات للبدء: <strong>{art.keywords.join(' / ')}</strong></p>
+                              <p>روابط الكلمات للبدء: <strong>{art.keywords?.join(' / ') || ''}</strong></p>
                             </div>
                           )}
 
@@ -1193,16 +1335,16 @@ export default function App() {
                                 navigator.clipboard.writeText(`https://web.cytotec.fun/#article-${art.id}`);
                                 alert("تم نسخ رابط المقال للمشاركة بنجاح.");
                               }}
-                              className="px-4 py-1.5 rounded-lg bg-slate-950 text-slate-300 border border-slate-800 hover:bg-slate-900 text-xs transition"
+                              className="px-4 py-1.5 rounded-lg bg-slate-955 text-slate-300 border border-slate-800 hover:bg-slate-900 text-xs transition"
                             >
                               مشاركة رابط المقال 🔗
                             </button>
                             {isAdminAuthenticated && (
                               <button
                                 onClick={() => handleDeleteArticle(art.id)}
-                                className="px-3 py-1.5 rounded-lg border border-red-500/20 bg-red-550/10 text-red-400 text-xs hover:bg-red-500/20 transition"
+                                className="px-4 py-1.5 rounded-lg bg-rose-550/10 hover:bg-rose-500/20 text-rose-450 border border-rose-500/25 text-xs transition font-extrabold"
                               >
-                                مسح من الفهرس
+                                حذف المقال 🗑️
                               </button>
                             )}
                           </div>
@@ -1210,43 +1352,17 @@ export default function App() {
                       );
                     })()
                   ) : (
-                    <div className="text-center py-20 text-slate-500 space-y-2">
-                      <FileText className="w-12 h-12 mx-auto text-slate-700" />
-                      <p className="text-xs">يرجى اختيار مقال من القائمة لقراءته والتحقق من مواصفات التحسين.</p>
+                    <div className="flex flex-col items-center justify-center h-full text-slate-500 text-center p-8 space-y-2">
+                       <p className="text-xs">يرجى تحديد مقال طبي من الفهرس الجانبي لمعاينة محتواه أو تصنيفه.</p>
                     </div>
                   )}
                 </div>
 
               </div>
-
             </motion.div>
           )}
 
-          {/* TAB 6: PREMIUM WHATSAPP CRM */}
-          {currentTab === 'crm' && isAdminAuthenticated && (
-            <motion.div
-              key="crm-tab"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-            >
-              <CRMManagement />
-            </motion.div>
-          )}
-
-          {/* TAB 7: ENGINE PERFORMANCE INDS (LIGHTHOUSE METRICS) */}
-          {currentTab === 'analytics' && isAdminAuthenticated && (
-            <motion.div
-              key="analytics-tab"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-            >
-              <AnalyticsSection />
-            </motion.div>
-          )}
-
-          {/* TAB 8: ADMIN CONTROL SUITE  */}
+          {/* TAB 6: MAIN SYSTEM ADMINISTRATIVE CMS PORTAL */}
           {currentTab === 'admin' && (
             <motion.div
               key="admin-tab"
@@ -1255,220 +1371,642 @@ export default function App() {
               exit={{ opacity: 0, y: -10 }}
               className="space-y-6 text-right animate-fade-in"
             >
+              
               {!isAdminAuthenticated ? (
-                // Authentic security system with 519911
-                <div className="max-w-md mx-auto bg-slate-900 border border-slate-800 p-8 rounded-2xl space-y-4 shadow-2xl text-center">
-                  <div className="w-12 h-12 rounded-full bg-teal-500/10 text-teal-400 flex items-center justify-center mx-auto">
-                    <Settings className="w-6 h-6 animate-spin-slow" />
+                /* Admin Login Gate overlay */
+                <div className="max-w-md mx-auto bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-2xl text-center space-y-6">
+                  <div className="w-16 h-16 bg-teal-500/10 text-teal-400 rounded-full flex items-center justify-center mx-auto border border-teal-500/20">
+                    <Settings className="w-8 h-8 animate-spin" style={{ animationDuration: '8s' }} />
                   </div>
                   <div>
-                    <h3 className="font-extrabold text-white text-base">تسجيل الدخول لبوابة الإدارة والـ AI</h3>
-                    <p className="text-[11px] text-slate-450 mt-1">يلزم إدخال رمز الأمان الحصري للمدير للمتابعة.</p>
+                    <h3 className="text-lg font-black text-white">بوابة المنسقين والناشرين السرية 🔐</h3>
+                    <p className="text-xs text-slate-400 mt-1">تحديد الهوية والرقابة الإدارية - أدخل الرمز السداسي للتنصيب</p>
                   </div>
 
-                  <form onSubmit={handleAdminAuth} className="space-y-3.5">
-                    <input
-                      type="password"
-                      required
-                      value={adminPasswordInput}
-                      onChange={(e) => setAdminPasswordInput(e.target.value)}
-                      placeholder="ادخل رمز المشرف المكون من 6 أرقام..."
-                      className="w-full bg-slate-950 border border-slate-800 rounded-xl py-2 px-3 text-xs text-slate-100 focus:outline-none focus:border-teal-400 text-center font-mono"
-                    />
-                    {adminError && <p className="text-[11px] text-rose-400">{adminError}</p>}
+                  <form onSubmit={handleAdminAuth} className="space-y-4">
+                    <div className="space-y-1 text-right">
+                      <label className="text-[10px] text-slate-400 block">رمز الإذن ولوحة القيادة المشتركة:</label>
+                      <input
+                        type="password"
+                        required
+                        value={adminPasswordInput}
+                        onChange={(e) => setAdminPasswordInput(e.target.value)}
+                        placeholder="أدخل رمز المرور (519911)"
+                        className="w-full bg-slate-950 border border-slate-800 focus:border-teal-400 rounded-xl px-3 py-3 text-center text-xs focus:outline-none tracking-widest text-white font-mono"
+                      />
+                    </div>
+
+                    {adminError && <p className="text-rose-455 text-[11px] text-center font-bold leading-normal">{adminError}</p>}
+
                     <button
                       type="submit"
-                      className="w-full py-2 rounded-xl bg-teal-500 hover:bg-teal-600 active:scale-95 text-slate-950 font-black text-xs transition"
+                      className="w-full bg-gradient-to-r from-teal-500 to-sky-450 text-slate-955 font-extrabold py-2.5 rounded-xl text-xs sm:text-sm active:scale-95 transition"
                     >
-                      دخول الإدارة العامة
+                      ولوج البوابة اللوجستية الآن 🚀
                     </button>
                   </form>
                 </div>
               ) : (
+                /* Authenticated Enterprise Dashboard layout */
                 <div className="space-y-6">
-                  
-                  {/* Auth status block */}
-                  <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-center justify-between gap-4">
+                  <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4">
                     <div>
                       <h2 className="text-xl font-black text-white flex items-center gap-2">
-                        <span>لوحة تسيير الأرشفة السحابية ونشر الـ AI</span>
-                        <span className="bg-green-550/15 text-emerald-400 border border-emerald-500/20 text-[10px] px-2 py-0.5 rounded-full">المشرف متصل</span>
+                        <Settings className="w-6 h-6 text-teal-400" />
+                        <span>لوحة الإدارة والتحكم والإنتاج البرمجي الموحد</span>
                       </h2>
-                      <p className="text-xs text-slate-400 mt-0.5">حقن كلمات البحث، الإطلاق التلقائي لصفحات السكيما السريعة.</p>
+                      <p className="text-xs text-slate-400 mt-1">
+                        مرحباً بك مجدداً. تتيح لك هذه اللوحة إدارة ونشر المقالات، تتبع المحادثات وحسابات CRM، وتحميل وتقييم التحليلات.
+                      </p>
                     </div>
 
-                    <button
-                      onClick={() => {
-                        setIsAdminAuthenticated(false);
-                        localStorage.removeItem('is_admin_authed');
-                      }}
-                      className="px-3.5 py-1.5 rounded-lg border border-red-500/20 bg-red-550/10 text-red-400 hover:bg-red-500/20 text-xs transition"
-                    >
-                      خروج آمن
-                    </button>
-                  </div>
-
-                  {/* Admin Inner Navigation */}
-                  <div className="flex flex-wrap gap-2 bg-slate-950 p-2.5 rounded-xl border border-slate-850">
-                    <button
-                      onClick={() => setAdminSubTab('content')}
-                      className={`px-4 py-2 rounded-lg text-xs font-bold transition duration-155 ${adminSubTab === 'content' ? 'bg-teal-500 text-slate-950 shadow-md shadow-teal-500/20 font-black' : 'text-slate-400 hover:text-slate-205'}`}
-                    >
-                      🤖 مصنع المقالات والـ AI
-                    </button>
-                    <button
-                      onClick={() => setAdminSubTab('programmatic')}
-                      className={`px-4 py-2 rounded-lg text-xs font-bold transition duration-155 ${adminSubTab === 'programmatic' ? 'bg-teal-500 text-slate-950 shadow-md shadow-teal-500/20 font-black' : 'text-slate-400 hover:text-slate-205'}`}
-                    >
-                      🌍 الصفحات المحلية والـ SEO
-                    </button>
-                    <button
-                      onClick={() => setAdminSubTab('crm')}
-                      className={`px-4 py-2 rounded-lg text-xs font-bold transition duration-155 ${adminSubTab === 'crm' ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20 font-black' : 'text-slate-400 hover:text-slate-205'}`}
-                    >
-                      💬 إدارة عملاء الواتساب CRM
-                    </button>
-                    <button
-                      onClick={() => setAdminSubTab('analytics')}
-                      className={`px-4 py-2 rounded-lg text-xs font-bold transition duration-155 ${adminSubTab === 'analytics' ? 'bg-teal-500 text-slate-950 shadow-md shadow-teal-500/20 font-black' : 'text-slate-400 hover:text-slate-205'}`}
-                    >
-                      ⚡ أداء السيرفر والأرشفة
-                    </button>
+                    {/* Sub-Tabs Selector inside Admin workspace */}
+                    <div className="flex flex-wrap gap-1.5 bg-slate-950 p-1 rounded-xl border border-slate-800">
+                      <button
+                        type="button"
+                        onClick={() => setAdminSubTab('content')}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-bold transition duration-150 ${adminSubTab === 'content' ? 'bg-teal-500/15 text-teal-400 border border-teal-500/25' : 'text-slate-400 hover:text-slate-100'}`}
+                      >
+                        ✍️ إدارة ونشر المقالات (CMS)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setAdminSubTab('programmatic')}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-bold transition duration-150 ${adminSubTab === 'programmatic' ? 'bg-teal-500/15 text-teal-400 border border-teal-500/25' : 'text-slate-400 hover:text-slate-100'}`}
+                      >
+                        🌍 المحافظات والأقسام الـ SEO
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setAdminSubTab('crm')}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-bold transition duration-150 ${adminSubTab === 'crm' ? 'bg-teal-500/15 text-teal-400 border border-teal-500/25' : 'text-slate-400 hover:text-slate-100'}`}
+                      >
+                        💬 كابينة الواتساب والطلبات
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setAdminSubTab('analytics')}
+                        className={`px-3 py-1.5 rounded-lg text-xs font-bold transition duration-150 ${adminSubTab === 'analytics' ? 'bg-teal-500/15 text-teal-400 border border-teal-500/25' : 'text-slate-400 hover:text-slate-100'}`}
+                      >
+                        📊 مؤشرات lighthouse والمخدمات
+                      </button>
+                    </div>
                   </div>
 
                   <AnimatePresence mode="wait">
-                    {/* SUB-TAB 1: CONTENT ENGINE */}
                     {adminSubTab === 'content' && (
                       <motion.div
                         key="subtab-content"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        className="grid grid-cols-1 lg:grid-cols-12 gap-6"
+                        className="space-y-6"
                       >
-                        {/* Left: SEO Keywords Injecter */}
-                        <div className="lg:col-span-6 space-y-6">
-                          <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4">
-                            <h3 className="text-xs font-bold text-teal-350 border-b border-slate-850 pb-2 flex items-center gap-1">
-                              <Plus className="w-4 h-4 text-teal-400" />
-                              <span>إدراج كبسولات كلمات دلالية للزحف</span>
-                            </h3>
+                        {/* Interactive Role Switcher Panel */}
+                          <div id="employee-role-switcher" className="bg-slate-900 border border-slate-800 p-5 rounded-2xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xl">
+                            <div className="space-y-1">
+                              <h4 className="text-sm font-black text-white flex items-center gap-2">
+                                <UserCheck className="w-4 h-4 text-teal-400" />
+                                <span>منصة تحرير وصلاحيات موظفي الشركة المشتركة 💼</span>
+                              </h4>
+                              <p className="text-[11px] text-slate-400 font-medium">
+                                يسمح نظام إدارة المحتوى (CMS) بتوزيع الأدوار والتحكم الفوري. اختر رتبتك الوظيفية لمعاينة الصلاحيات المقيدة حقيقياً:
+                              </p>
+                            </div>
+                            
+                            <div className="flex flex-wrap gap-1.5 p-1 bg-slate-950 rounded-xl border border-slate-800 w-full md:w-auto">
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setEmployeeRole('admin');
+                                  alert("👑 تم تعيين دورك: المدير العام للشركة. صلاحيات كاملة ونهائية تتيح لك كافة وظائف النشر والتعديل، الحذف المباشر، وتوليد المحتوى بالذكاء الاصطناعي.");
+                                }}
+                                className={`flex-1 md:flex-initial px-4 py-2 rounded-lg text-xs font-bold transition duration-150 ${employeeRole === 'admin' ? 'bg-teal-500 text-slate-950 font-black shadow-md shadow-teal-500/20' : 'text-slate-400 hover:text-slate-100'}`}
+                              >
+                                المدير العام 👑
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setEmployeeRole('publisher');
+                                  alert("✍️ تم تعيين دورك: الناشر الطبي المعتمد. يسمح لك بإنشاء مقالات جديدة وتوليدها بالذكاء الاصطناعي وتحريرها، لكن صلاحية الحذف النهائي مقيدة لحماية الأرشيف السحابي.");
+                                }}
+                                className={`flex-1 md:flex-initial px-4 py-2 rounded-lg text-xs font-bold transition duration-150 ${employeeRole === 'publisher' ? 'bg-sky-500 text-slate-955 font-black shadow-md shadow-sky-500/20' : 'text-slate-400 hover:text-slate-100'}`}
+                              >
+                                الناشر المعتمد ✍️
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  setEmployeeRole('editor');
+                                  alert("👁️ تم تعيين دورك: محرر موظف / متابع فني. وظيفتك مراجعة وتعديل محتوى المقالات والكلمات القائمة، لتجنب الأخطاء لا يسمح لك بإنشاء كتل جديدة أو حذف الأرشفة ذاتياً.");
+                                }}
+                                className={`flex-1 md:flex-initial px-4 py-2 rounded-lg text-xs font-bold transition duration-150 ${employeeRole === 'editor' ? 'bg-emerald-500 text-slate-955 font-black shadow-md shadow-emerald-500/20' : 'text-slate-400 hover:text-slate-100'}`}
+                              >
+                                محرر وموظف متابعة 👁️
+                              </button>
+                            </div>
+                        </div>
 
-                            <form onSubmit={handleAddKeyword} className="space-y-3">
-                              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                                <div className="sm:col-span-2">
-                                  <label className="text-[10px] text-slate-500 block mb-1">الكلمة أو الجملة المستهدفة بالبحث:</label>
-                                  <input
-                                    type="text"
-                                    required
-                                    value={newKeywordPhrase}
-                                    onChange={(e) => setNewKeywordPhrase(e.target.value)}
-                                    placeholder="مثال: توصيل سيتوتيك في الموالح مسقط"
-                                    className="w-full bg-slate-950 border border-slate-805 rounded-xl px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none"
-                                  />
+                        {/* Quick Metrics Statistics */}
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                          <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-1 shadow-sm">
+                            <div className="flex justify-between items-center text-slate-500">
+                              <span className="text-[10px]">إجمالي مقالات الدستور الطبي</span>
+                              <FileText className="w-4 h-4 text-teal-400" />
+                            </div>
+                            <p className="text-2xl font-black text-white font-mono">{articles.length}</p>
+                            <span className="text-[9px] text-emerald-400 block font-bold">✓ نشطة وتعمل على الخوادم حقيقياً</span>
+                          </div>
+
+                          <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-1 shadow-sm">
+                            <div className="flex justify-between items-center text-slate-500">
+                              <span className="text-[10px]">كلمات الزحف SEO المحقونة</span>
+                              <Layers className="w-4 h-4 text-sky-450" />
+                            </div>
+                            <p className="text-2xl font-black text-white font-mono">{keywords.length}</p>
+                            <span className="text-[9px] text-sky-400 block font-bold">✓ مستهدف لـ SGE والذكاء الاصطناعي</span>
+                          </div>
+
+                          <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-1 shadow-sm">
+                            <div className="flex justify-between items-center text-slate-500">
+                              <span className="text-[10px]">مستوى جودة المحتوى والـ SGE</span>
+                              <Sparkles className="w-4 h-4 text-amber-500 animate-pulse" />
+                            </div>
+                            <p className="text-2xl font-black text-white font-mono">98.9%</p>
+                            <span className="text-[9px] text-teal-450 block font-bold">ملائم لتوصيات Google AI</span>
+                          </div>
+
+                          <div className="bg-slate-900 border border-slate-800 p-4 rounded-xl space-y-1 shadow-sm">
+                            <div className="flex justify-between items-center text-slate-500">
+                              <span className="text-[10px]">المنصب الفعال للجلسة</span>
+                              <Activity className="w-4 h-4 text-emerald-400" />
+                            </div>
+                            <p className="text-sm font-black text-teal-300 truncate mt-1">
+                              {employeeRole === 'admin' ? 'المدير العام (نشط) 👑' : employeeRole === 'publisher' ? 'الناشر المعتمد ✍️' : 'مستشار ومحرر متابع 👁️'}
+                            </p>
+                            <span className="text-[9px] text-slate-500 block font-bold">اتصال دائم ومشفر SSL</span>
+                          </div>
+                        </div>
+
+                        {/* Left/Right Grid: Keywords Injector & AI Content Engine */}
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                          {/* Left: Keywords manager */}
+                          <div className="lg:col-span-6 space-y-4">
+                            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-md">
+                              <h3 className="text-xs font-black text-teal-355 border-b border-slate-850 pb-2 flex items-center gap-1.5 font-bold">
+                                <Plus className="w-4 h-4 text-teal-400" />
+                                <span>إدراج كبسولات كلمات دلالية للزحف</span>
+                              </h3>
+
+                              <form onSubmit={handleAddKeyword} className="space-y-3">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                  <div className="sm:col-span-2">
+                                    <label className="text-[10px] text-slate-400 block mb-1">الكلمة أو الجملة المستهدفة بالبحث:</label>
+                                    <input
+                                      type="text"
+                                      required
+                                      disabled={employeeRole === 'editor'}
+                                      value={newKeywordPhrase}
+                                      onChange={(e) => setNewKeywordPhrase(e.target.value)}
+                                      placeholder={employeeRole === 'editor' ? 'غير مسموح للمحرر بالإضافة' : "مثال: سيتوتيك في مسقط السيب"}
+                                      className="w-full bg-slate-955 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-teal-400 disabled:opacity-50"
+                                    />
+                                  </div>
+
+                                  <div>
+                                    <label className="text-[10px] text-slate-405 block mb-1">بلد الزحف:</label>
+                                    <select
+                                      disabled={employeeRole === 'editor'}
+                                      value={newKeywordCountry}
+                                      onChange={(e) => setNewKeywordCountry(e.target.value)}
+                                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2 py-2 text-xs text-slate-202 focus:outline-none disabled:opacity-50"
+                                    >
+                                      {GCC_ST_CONFIGS.map(c => (
+                                        <option key={c.code} value={c.code}>{c.nameAr}</option>
+                                      ))}
+                                      <option value="GLOBAL">عالمي (الكل)</option>
+                                    </select>
+                                  </div>
                                 </div>
 
+                                <button
+                                  type="submit"
+                                  disabled={employeeRole === 'editor'}
+                                  className="bg-teal-500 hover:bg-teal-600 font-extrabold text-slate-955 text-xs px-4 py-2 rounded-lg transition duration-155 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                  {employeeRole === 'editor' ? 'الإضافة مقيدة للمشرفين' : 'حفظ وحقن الكلمة دلالياً'}
+                                </button>
+                              </form>
+
+                              {/* Keyword display log */}
+                              <div className="space-y-2 max-h-40 overflow-y-auto pt-3 border-t border-slate-850">
+                                {keywords.length === 0 ? (
+                                  <p className="text-[10px] text-slate-550 text-center">لا توجد كلمات محقونة حالياً في النظام.</p>
+                                ) : (
+                                  keywords.map(kw => (
+                                    <div key={kw.id} className="bg-slate-955 p-2.5 rounded-lg border border-slate-850 flex items-center justify-between text-xs transition hover:border-slate-800">
+                                      <div>
+                                        <span className="font-extrabold text-slate-200">#{kw.phrase}</span>
+                                        <span className="text-[9px] text-slate-550 block">الدولة المستهدفة: {kw.country} • حجم الاهتمام والنمو: {kw.searchVolume}%</span>
+                                      </div>
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          if (employeeRole === 'editor' || employeeRole === 'publisher') {
+                                            alert("⚠️ صلاحيات دورك الوظيفي الحالي تحميك من حذف كلمات الزحف. هذه الإمكانية تقتصر على المدير العام.");
+                                            return;
+                                          }
+                                          handleDeleteKeyword(kw.id);
+                                        }}
+                                        className="p-1.5 text-slate-550 hover:text-rose-400 hover:bg-slate-900 rounded-lg transition"
+                                        title="حذف الكلمة"
+                                      >
+                                        <Trash2 className="w-3.5 h-3.5" />
+                                      </button>
+                                    </div>
+                                  ))
+                                )}
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Right: AI Article publisher */}
+                          <div className="lg:col-span-6 space-y-4">
+                            <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-md">
+                              <h3 className="text-xs font-bold text-teal-355 border-b border-slate-850 pb-2 flex items-center gap-1.5">
+                                <Sparkles className="w-4 h-4 text-sky-450" />
+                                <span>توليد ونشر آلي للمقالات بالـ AI Content Engine</span>
+                              </h3>
+
+                              <div className="space-y-3">
                                 <div>
-                                  <label className="text-[10px] text-slate-505 block mb-1">بلد الزحف:</label>
+                                  <label className="text-[10px] text-slate-450 block mb-1">اختر الكملة المفتاحية المستهدفة لإنتاج المحتوى الطبي:</label>
                                   <select
-                                    value={newKeywordCountry}
-                                    onChange={(e) => setNewKeywordCountry(e.target.value)}
-                                    className="w-full bg-slate-950 border border-slate-805 rounded-xl px-2.5 py-1.5 text-xs text-slate-200 focus:outline-none"
+                                    disabled={employeeRole === 'editor'}
+                                    value={aiSelectedKeyword}
+                                    onChange={(e) => setAiSelectedKeyword(e.target.value)}
+                                    className="w-full bg-slate-955 text-slate-350 text-xs rounded-xl px-2.5 py-1.5 border border-slate-800 focus:outline-none focus:border-teal-400 cursor-pointer disabled:opacity-50"
                                   >
-                                    {GCC_ST_CONFIGS.map(c => (
-                                      <option key={c.code} value={c.code}>{c.nameAr}</option>
+                                    <option value="">اختر كلمة للبدء</option>
+                                    {keywords.map(k => (
+                                      <option key={k.id} value={k.phrase}>{k.phrase}</option>
                                     ))}
-                                    <option value="GLOBAL">عالمي (الكل)</option>
                                   </select>
                                 </div>
-                              </div>
 
-                              <button
-                                type="submit"
-                                className="bg-teal-500 hover:bg-teal-600 font-extrabold text-slate-950 text-xs px-4 py-2 rounded-lg transition"
-                              >
-                                حفظ وحقن الكلمة
-                              </button>
-                            </form>
-
-                            {/* Keyword display log */}
-                            <div className="space-y-4 max-h-48 overflow-y-auto pt-3 border-t border-slate-850">
-                              {keywords.map(kw => (
-                                <div key={kw.id} className="bg-slate-950 p-2.5 rounded-lg border border-slate-850 flex items-center justify-between text-xs">
+                                <div className="grid grid-cols-2 gap-2">
                                   <div>
-                                    <span className="font-bold text-slate-200 font-mono">#{kw.phrase}</span>
-                                    <span className="text-[9px] text-slate-500 block">الدولة: {kw.country} | حجم الاهتمام: {kw.searchVolume}%</span>
+                                    <label className="text-[10px] text-slate-450 block mb-1">الدولة المستهدفة بالإنتاج:</label>
+                                    <select
+                                      disabled={employeeRole === 'editor'}
+                                      value={aiSelectedCountry}
+                                      onChange={(e) => setAiSelectedCountry(e.target.value)}
+                                      className="w-full bg-slate-950 text-slate-350 text-xs rounded-xl px-2.5 py-1.5 border border-slate-800 focus:outline-none disabled:opacity-50"
+                                    >
+                                      {GCC_ST_CONFIGS.map(c => (
+                                        <option key={c.code} value={c.code}>{c.nameAr}</option>
+                                      ))}
+                                    </select>
                                   </div>
-                                  <button
-                                    onClick={() => handleDeleteKeyword(kw.id)}
-                                    className="p-1 text-slate-600 hover:text-red-400 transition"
-                                  >
-                                    <Trash2 className="w-4 h-4" />
-                                  </button>
+
+                                  <div>
+                                    <label className="text-[10px] text-slate-450 block mb-1">المقاطعة/الحي (للهجة الـ SGE):</label>
+                                    <input
+                                      type="text"
+                                      disabled={employeeRole === 'editor'}
+                                      value={aiSelectedRegion}
+                                      onChange={(e) => setAiSelectedRegion(e.target.value)}
+                                      placeholder="مثال: ذفار صلالة"
+                                      className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-slate-205 focus:outline-none disabled:opacity-50"
+                                    />
+                                  </div>
                                 </div>
-                              ))}
+
+                                <button
+                                  type="button"
+                                  onClick={handleGenerateAIArticle}
+                                  disabled={aiGenerating || !aiSelectedKeyword || employeeRole === 'editor'}
+                                  className="w-full py-2 bg-gradient-to-r from-teal-500 to-sky-450 hover:from-teal-600 hover:to-sky-500 rounded-xl font-bold text-slate-950 text-xs transition flex items-center justify-center gap-1.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                  <Sparkles className="w-4 h-4 animate-spin-slow" />
+                                  <span>
+                                    {aiGenerating 
+                                      ? 'جاري صياغة المقال والروابط دلالياً بالـ AI...' 
+                                      : employeeRole === 'editor' 
+                                      ? 'التوليد مقيد للمشرف المعتمد والناشر' 
+                                      : 'صياغة ونشر فوري بالذكاء الاصطناعي (Gemini) 🚀'}
+                                  </span>
+                                </button>
+                                <span className="text-[9px] text-slate-500 block text-center leading-normal">
+                                  * يربط المقال تلقائياً بكبينة الواتساب الموحدة {WHATSAPP_NUMBER} ويحقن الأوسمة المناسبة للأرشفة.
+                                </span>
+                              </div>
                             </div>
                           </div>
                         </div>
 
-                        {/* Right: AI Article publisher */}
-                        <div className="lg:col-span-6 space-y-6">
-                          <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4">
-                            <h3 className="text-xs font-bold text-teal-355 border-b border-slate-850 pb-2 flex items-center gap-1.5">
-                              <Sparkles className="w-4 h-4 text-sky-450" />
-                              <span>توليد ونشر آلي للمقالات بالـ AI Content Engine</span>
-                            </h3>
-
-                            <div className="space-y-3">
+                        {/* Interactive Manual Article Publishing & Editing form */}
+                        <div id="manual-article-editor-form" className="scroll-mt-6 bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-lg">
+                          <div className="flex items-center justify-between border-b border-slate-850 pb-3">
+                            <div className="flex items-center gap-2">
+                              <div className={`p-2 rounded-lg ${manualIdToEdit ? 'bg-amber-500/10 text-amber-400' : 'bg-teal-500/10 text-teal-400'}`}>
+                                <Settings2 className="w-5 h-5" />
+                              </div>
                               <div>
-                                <label className="text-[10px] text-slate-450 block mb-1">اختر الكملة المفتاحية المستهدفة لإنتاج المحتوى الطبي:</label>
+                                <h3 className="text-sm font-black text-white">
+                                  {manualIdToEdit ? `مُحرّر الأرشفة: تعديل ومراجعة المقال النشط` : 'لوحة صياغة ونشر المقالات الطبية اليدوية'}
+                                </h3>
+                                <p className="text-[10px] text-slate-400 font-medium">
+                                  {manualIdToEdit ? `أنت الآن تعدل مسودة المقال. قم بتصحيح وتعديل المعايير ثم احفظ التغييرات.` : 'اكتب المقال مباشرة مع إمكانيات حقن الكلمات ومزج العبارات وعرّف من يحقنه.'}
+                                </p>
+                              </div>
+                            </div>
+
+                            {manualIdToEdit && (
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  handleCancelEdit();
+                                  alert("تم الخروج وإلغاء تعديل المقال، والعودة لوضع الإضافة الجديدة.");
+                                }}
+                                className="px-3 py-1 rounded-lg bg-rose-500/10 border border-rose-500/20 text-rose-400 hover:bg-rose-500/20 text-[10px] font-bold transition flex items-center gap-1"
+                              >
+                                <X className="w-3 h-3" />
+                                <span>إلغاء وضع التعديل</span>
+                              </button>
+                            )}
+                          </div>
+
+                          <form onSubmit={handleManualArticlePublish} className="space-y-4 text-slate-300">
+                            {/* Title & Category row */}
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+                              <div className="md:col-span-8">
+                                <label className="text-[10px] text-slate-400 block mb-1">عنوان المقال المستهدف بالبحث والأناقة وجاذبية زوار SGE:</label>
+                                <input
+                                  type="text"
+                                  required
+                                  value={manualTitle}
+                                  onChange={(e) => setManualTitle(e.target.value)}
+                                  placeholder="مثال: أين يباع سيتوتيك الأصلي في عمان ومميزات فايزر 1461..."
+                                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-teal-400"
+                                />
+                              </div>
+
+                              <div className="md:col-span-4">
+                                <label className="text-[10px] text-slate-400 block mb-1">تصنيف وبوابة الأقسام الطبية:</label>
                                 <select
-                                  value={aiSelectedKeyword}
-                                  onChange={(e) => setAiSelectedKeyword(e.target.value)}
-                                  className="w-full bg-slate-950 text-slate-350 text-xs rounded-xl px-2.5 py-1.5 border border-slate-800 focus:outline-none focus:border-teal-400 cursor-pointer"
+                                  value={manualCategory}
+                                  onChange={(e) => setManualCategory(e.target.value)}
+                                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none cursor-pointer"
                                 >
-                                  <option value="">اختر كلمة للبدء</option>
-                                  {keywords.map(k => (
-                                    <option key={k.id} value={k.phrase}>{k.phrase}</option>
+                                  <option value="الوعي الطبي والتحقق">الوعي الطبي والتحقق</option>
+                                  <option value="توفير وتوزيع طبي">توفير وتوزيع طبي</option>
+                                  <option value="إرشاد وتوزيع معتمد">إرشاد وتوزيع معتمد</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            {/* Keywords and Custom author/roles Row */}
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                              <div>
+                                <label className="text-[10px] text-slate-400 block mb-1">الكلمات الدلالية المدمجة (مفصولة بفاصلة):</label>
+                                <input
+                                  type="text"
+                                  value={manualKeywords}
+                                  onChange={(e) => setManualKeywords(e.target.value)}
+                                  placeholder="مثال: سيتوتيك, فايزر مسقط, توصيل سريع"
+                                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-teal-400"
+                                />
+                              </div>
+
+                              <div>
+                                <label className="text-[10px] text-slate-400 block mb-1">اسم الكاتب وممثل النشر:</label>
+                                <input
+                                  type="text"
+                                  value={manualAuthor}
+                                  onChange={(e) => setManualAuthor(e.target.value)}
+                                  placeholder="مثال: د. سليم الصيدلاني"
+                                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-teal-400"
+                                />
+                              </div>
+
+                              <div>
+                                <label className="text-[10px] text-slate-400 block mb-1">لهجة ومسار اللغة المستهدفة:</label>
+                                <input
+                                  type="text"
+                                  value={manualDialect}
+                                  onChange={(e) => setManualDialect(e.target.value)}
+                                  placeholder="مثال: لهجة عُمانية محلية"
+                                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-teal-400"
+                                />
+                              </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                              <div>
+                                <label className="text-[10px] text-slate-400 block mb-1">المستهدف الجغرافي (الدولة):</label>
+                                <select
+                                  value={manualCountry}
+                                  onChange={(e) => setManualCountry(e.target.value)}
+                                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none cursor-pointer"
+                                >
+                                  <option value="all">جميع دول الخليج 🌍</option>
+                                  {GCC_ST_CONFIGS.map(c => (
+                                    <option key={c.code} value={c.code}>{c.nameAr}</option>
                                   ))}
                                 </select>
                               </div>
-
-                              <div className="grid grid-cols-2 gap-2">
-                                <div>
-                                  <label className="text-[10px] text-slate-450 block mb-1">الدولة المستهدفة بالإنتاج:</label>
-                                  <select
-                                    value={aiSelectedCountry}
-                                    onChange={(e) => setAiSelectedCountry(e.target.value)}
-                                    className="w-full bg-slate-950 text-slate-350 text-xs rounded-xl px-2.5 py-1.5 border border-slate-800 focus:outline-none"
-                                  >
-                                    {GCC_ST_CONFIGS.map(c => (
-                                      <option key={c.code} value={c.code}>{c.nameAr}</option>
-                                    ))}
-                                  </select>
-                                </div>
-
-                                <div>
-                                  <label className="text-[10px] text-slate-455 block mb-1">المقاطعة/الحي (للهجة الـ SGE):</label>
-                                  <input
-                                    type="text"
-                                    value={aiSelectedRegion}
-                                    onChange={(e) => setAiSelectedRegion(e.target.value)}
-                                    placeholder="مثال: ذفار صلالة"
-                                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-2.5 py-1.5 text-xs text-slate-205 focus:outline-none"
-                                  />
-                                </div>
+                              <div>
+                                <label className="text-[10px] text-slate-400 block mb-1">المنطقة أو الحي المستهدَف (مثال: السيب):</label>
+                                <input
+                                  type="text"
+                                  value={manualRegion}
+                                  onChange={(e) => setManualRegion(e.target.value)}
+                                  placeholder="مثال: السالبيّة، السيب، مسقط"
+                                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-teal-400"
+                                />
                               </div>
-
-                              <button
-                                onClick={handleGenerateAIArticle}
-                                disabled={aiGenerating}
-                                className={`w-full py-2 bg-gradient-to-r from-teal-500 to-sky-455 hover:from-teal-600 hover:to-sky-505 rounded-xl font-bold text-slate-950 text-xs transition flex items-center justify-center gap-1.5 ${aiGenerating ? 'opacity-50 cursor-not-allowed' : ''}`}
-                              >
-                                <Sparkles className="w-4 h-4" />
-                                <span>{aiGenerating ? 'جاري صياغة المقال والروابط بالذكاء الاصطناعي مبرمجاً...' : 'توليد ونشر فوري بالـ AI (Gemini)'}</span>
-                              </button>
                             </div>
+
+                            <div>
+                              <label className="text-[10px] text-slate-400 block mb-1">محتوى المقال الطبي بالتفصيل (يدعم التنسيق النصي):</label>
+                              <textarea
+                                required
+                                value={manualContent}
+                                onChange={(e) => setManualContent(e.target.value)}
+                                placeholder="اكتب محتوى المقال الطبي الشامل هنا لعرضه للمرضى والباحثين..."
+                                className="w-full h-44 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-100 font-sans focus:outline-none focus:border-teal-400"
+                              />
+                            </div>
+
+                            <button
+                              type="submit"
+                              className={`w-full py-2.5 rounded-xl font-bold text-slate-950 text-xs transition active:scale-95 duration-155 ${manualIdToEdit ? 'bg-amber-400 hover:bg-amber-500' : 'bg-teal-500 hover:bg-teal-600'}`}
+                            >
+                              {manualIdToEdit ? 'حفظ التحديثات وإعادة جدولة الأرشفة ✏️' : 'نشر وتثبيت المقال الطبي يدوياً في الخادم 🚀'}
+                            </button>
+                          </form>
+                        </div>
+
+                        {/* Real-time article database spreadsheet workspace */}
+                        <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-lg">
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-850 pb-3">
+                            <div>
+                              <h3 className="text-sm font-black text-white flex items-center gap-1.5 font-bold">
+                                <Database className="w-4 h-4 text-sky-455" />
+                                <span>جدول إدارة المحتوى المنشور والمتابعة والتعديل الفوري</span>
+                              </h3>
+                              <p className="text-[10px] text-slate-400 font-medium">
+                                تصفح كافة محتويات وقاموس الأشفة الطبية النشطة على السيرفر، وتحكم بمسار المقالات للموظفين.
+                              </p>
+                            </div>
+
+                            {/* Search & filters inside worksheet ledger */}
+                            <div className="flex flex-wrap gap-2">
+                              <select 
+                                value={adminArticleCategory}
+                                onChange={(e) => setAdminArticleCategory(e.target.value)}
+                                className="bg-slate-955 text-slate-205 text-[10px] sm:text-xs rounded-lg px-2 text-right py-1 border border-slate-800 focus:outline-none cursor-pointer"
+                              >
+                                <option value="all">جميع فئات الدستور</option>
+                                <option value="الوعي الطبي والتحقق">الوعي الطبي والتحقق</option>
+                                <option value="توفير وتوزيع طبي">توفير وتوزيع طبي</option>
+                                <option value="إرشاد وتوزيع معتمد">إرشاد وتوزيع معتمد</option>
+                              </select>
+
+                              <input
+                                type="text"
+                                value={adminArticleSearch}
+                                onChange={(e) => setAdminArticleSearch(e.target.value)}
+                                placeholder="البحث في العناوين والمحتوى..."
+                                className="bg-slate-950 border border-slate-800 rounded-lg px-3 py-1 text-[10px] sm:text-xs text-slate-200 focus:outline-none text-right"
+                              />
+                            </div>
+                          </div>
+
+                          {/* Articles Worksheet Grid/Table list */}
+                          <div className="overflow-x-auto rounded-xl border border-slate-850 bg-slate-950">
+                            {articles.filter(a => {
+                              const matchCategory = adminArticleCategory === 'all' || a.category === adminArticleCategory;
+                              const q = adminArticleSearch.trim().toLowerCase();
+                              return matchCategory && (q === "" || a.title.toLowerCase().includes(q) || a.content.toLowerCase().includes(q) || (a.keywords && a.keywords.some(k => k.toLowerCase().includes(q))));
+                            }).length === 0 ? (
+                              <div className="p-8 text-center space-y-2">
+                                <div className="text-slate-600 font-mono text-center text-[10px]">NO_MATCHED_ARTICLES_FOUND</div>
+                                <p className="text-xs text-slate-400">لم نعثر على أي مقالات تطابق خياراتك الحالية للبحث والتصنيف.</p>
+                              </div>
+                            ) : (
+                              <table className="w-full text-right text-xs border-collapse font-sans">
+                                <thead>
+                                  <tr className="bg-slate-900 border-b border-slate-855 text-[10px] text-slate-400 font-bold">
+                                    <th className="p-3">المقال الطبي المستهدف</th>
+                                    <th className="p-3 hidden md:table-cell">التصنيف</th>
+                                    <th className="p-3">مستهدف البحث الجغرافي</th>
+                                    <th className="p-3 hidden sm:table-cell font-mono text-left">الناشر / الكاتب</th>
+                                    <th className="p-3 text-left">تاريخ التحديث</th>
+                                    <th className="p-3 text-center">أدوات التحكم والناشر</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {articles
+                                    .filter(a => {
+                                      const matchCategory = adminArticleCategory === 'all' || a.category === adminArticleCategory;
+                                      const q = adminArticleSearch.trim().toLowerCase();
+                                      return matchCategory && (q === "" || a.title.toLowerCase().includes(q) || a.content.toLowerCase().includes(q) || (a.keywords && a.keywords.some(k => k.toLowerCase().includes(q))));
+                                    })
+                                    .map(art => {
+                                      const isCurrentlyEditing = manualIdToEdit === art.id;
+                                      return (
+                                        <tr 
+                                          key={art.id} 
+                                          className={`border-b border-slate-850 transition duration-155 hover:bg-slate-900/40 text-slate-205 ${isCurrentlyEditing ? 'bg-amber-500/5 border-amber-500/30' : ''}`}
+                                        >
+                                          <td className="p-3 max-w-xs sm:max-w-md">
+                                            <div className="space-y-1">
+                                              <p className="font-extrabold text-slate-100 leading-snug cursor-pointer hover:text-teal-400 transition" onClick={() => handleStartEdit(art)}>
+                                                {art.title}
+                                              </p>
+                                              <div className="flex flex-wrap gap-1">
+                                                <span className="text-[8px] bg-slate-900 text-slate-400 px-1.5 py-0.5 rounded font-mono">ID: {art.id}</span>
+                                                {art.keywords && art.keywords.slice(0, 3).map((kw, idx) => (
+                                                  <span key={idx} className="text-[8px] bg-slate-900/60 text-teal-400 font-semibold px-1 py-0.5 rounded font-mono">#{kw}</span>
+                                                ))}
+                                              </div>
+                                            </div>
+                                          </td>
+
+                                          <td className="p-3 hidden md:table-cell">
+                                            <span className="bg-slate-900 border border-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded-lg whitespace-nowrap">
+                                              {art.category}
+                                            </span>
+                                          </td>
+
+                                          <td className="p-3">
+                                            <div className="space-y-0.5">
+                                              <span className="text-[10px] font-bold text-slate-300">
+                                                {art.country === 'all' ? 'جميع دول الخليج 🌍' : art.country === 'OM' ? 'سلطنة عمان 🇴🇲' : art.country === 'SA' ? 'المملكة السعودية 🇸🇦' : art.country === 'AE' ? 'الإمارات 🇦🇪' : art.country === 'QA' ? 'قطر 🇶🇦' : art.country === 'KW' ? 'الكويت 🇰🇼' : art.country === 'BH' ? 'البحرين 🇧🇭' : art.country}
+                                              </span>
+                                              {art.region && (
+                                                <span className="text-[9px] text-slate-400 block truncate max-w-[120px]">
+                                                  حي: {art.region}
+                                                </span>
+                                              )}
+                                            </div>
+                                          </td>
+
+                                          <td className="p-3 hidden sm:table-cell font-mono text-left text-[10px] text-slate-450">
+                                            {art.author || 'المدير العام'}
+                                          </td>
+
+                                          <td className="p-3 text-left font-mono text-[10px] text-slate-505">
+                                            {art.lastUpdated}
+                                          </td>
+
+                                          <td className="p-3">
+                                            <div className="flex flex-wrap items-center justify-center gap-1.5 font-sans">
+                                              <button
+                                                type="button"
+                                                onClick={() => handleStartEdit(art)}
+                                                className={`px-2 py-1 rounded text-[10px] transition ${isCurrentlyEditing ? 'bg-amber-400 text-slate-900 font-bold' : 'bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-800'}`}
+                                              >
+                                                ✏️ تعديل
+                                              </button>
+
+                                              <button
+                                                type="button"
+                                                onClick={() => {
+                                                  if (employeeRole === 'editor') {
+                                                    alert("⚠️ دورك الوظيفي كمحرر لا يسمح لك بحذف المقالات المنشورة. يرجى مراجعة المسؤول.");
+                                                    return;
+                                                  }
+                                                  handleDeleteArticle(art.id);
+                                                }}
+                                                className="px-2 py-1 rounded bg-rose-500/10 hover:bg-rose-500/20 text-rose-450 border border-rose-500/20 text-[10px] transition"
+                                              >
+                                                🗑️ حذف
+                                              </button>
+
+                                              <button
+                                                type="button"
+                                                onClick={() => {
+                                                  setActiveArticleId(art.id);
+                                                  setCurrentTab('articles');
+                                                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                  alert(`🌐 جاري نقلك إلى الباب الطبي لمعاينة المقال "${art.title}" كما يراه المريض والزوار!`);
+                                                }}
+                                                className="px-2 py-1 rounded bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 border border-teal-500/20 text-[10px] transition"
+                                              >
+                                                👁️ معاينة
+                                              </button>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      );
+                                    })}
+                                </tbody>
+                              </table>
+                            )}
                           </div>
                         </div>
                       </motion.div>
